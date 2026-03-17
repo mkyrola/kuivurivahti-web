@@ -21,12 +21,18 @@ export default async function HomePage({
     <>
       <HeroNightWatch />
       <ProblemCards />
-      <FeaturesGrid />
-      <SensorSpecs />
-      <LiveDryingWidget />
-      <DryingCurveStory />
-      <CompetitorTable />
-      <PricingSection />
+      <div id="tuote">
+        <FeaturesGrid />
+        <SensorSpecs />
+      </div>
+      <div id="miten-toimii">
+        <LiveDryingWidget />
+        <DryingCurveStory />
+      </div>
+      <div id="hinnat">
+        <CompetitorTable />
+        <PricingSection />
+      </div>
       <AIRoadmap />
       <CTASection />
     </>

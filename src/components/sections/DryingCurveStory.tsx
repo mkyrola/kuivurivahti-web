@@ -19,9 +19,8 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 // Simulated real data based on Veijo Huju pilot (Aug–Sep 2025)
-// Represents ~6h of drying session with anomaly event at hour ~4.5
 const SESSION_DATA = Array.from({ length: 72 }, (_, i) => {
-  const h = i / 12; // 5-min intervals → hours
+  const h = i / 12;
   const baseExhaust = 38 + Math.sin(h * 0.8) * 4 + h * 0.3;
   const anomaly = h > 4.3 && h < 4.9 ? (h - 4.3) * 14 : 0;
   const outdoor = 18 + Math.sin(h * 0.4) * 3;
@@ -39,92 +38,103 @@ export function DryingCurveStory() {
   const [visibleCount, setVisibleCount] = useState(0);
 
   useGSAP(() => {
-    gsap.fromTo(
-      containerRef.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 0.6,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-          onEnter: () => {
-            let count = 0;
-            const interval = setInterval(() => {
-              count += 3;
-              setVisibleCount(count);
-              if (count >= SESSION_DATA.length) clearInterval(interval);
-            }, 30);
-          },
+    gsap.fromTo('.curve-head', { opacity: 0, y: 24 }, {
+      opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
+      scrollTrigger: { trigger: '.curve-head', start: 'top 85%' },
+    });
+
+    gsap.fromTo('.curve-chart', { opacity: 0, y: 30 }, {
+      opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.curve-chart', start: 'top 80%',
+        onEnter: () => {
+          let count = 0;
+          const interval = setInterval(() => {
+            count += 3;
+            setVisibleCount(count);
+            if (count >= SESSION_DATA.length) clearInterval(interval);
+          }, 30);
         },
-      }
-    );
+      },
+    });
+
+    gsap.fromTo('.curve-quote', { opacity: 0, x: -30 }, {
+      opacity: 1, x: 0, duration: 0.7, ease: 'power2.out',
+      scrollTrigger: { trigger: '.curve-quote', start: 'top 85%' },
+    });
   }, { scope: containerRef });
 
   const chartData = SESSION_DATA.slice(0, Math.max(visibleCount, 4));
 
   return (
-    <section ref={containerRef} className="bg-white py-24 px-6">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="mb-2 text-center font-[var(--font-space-grotesk)] text-3xl font-bold text-charcoal md:text-4xl">
-          {t('title')}
-        </h2>
-        <p className="mb-12 text-center text-sm text-gray-400">
-          Todelliset anturilukemat — Elo–Syyskuu 2025
-        </p>
+    <section ref={containerRef} className="relative bg-parchment py-28 px-6 overflow-hidden">
+      <div className="absolute inset-0 mesh-warm pointer-events-none" />
 
-        {/* Chart */}
-        <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6 shadow-sm">
-          <div className="mb-4 flex flex-wrap items-center gap-6 text-sm">
-            <span className="flex items-center gap-2">
-              <span className="inline-block h-3 w-8 rounded-full bg-orange" />
+      <div className="relative mx-auto max-w-6xl">
+        <div className="curve-head mb-12 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-orange/60 data-mono">Real Sensor Data</p>
+          <h2 className="font-[var(--font-space-grotesk)] text-3xl font-bold text-charcoal md:text-4xl lg:text-5xl tracking-tight">
+            {t('title')}
+          </h2>
+          <p className="mt-3 text-sm text-gray-500">
+            Todelliset anturilukemat — Elo–Syyskuu 2025
+          </p>
+        </div>
+
+        {/* Chart — dark card */}
+        <div className="curve-chart rounded-2xl bg-[#0d1520] p-6 md:p-8 shadow-depth-lg">
+          <div className="mb-5 flex flex-wrap items-center gap-6 text-xs data-mono">
+            <span className="flex items-center gap-2 text-white/50">
+              <span className="inline-block h-0.5 w-6 rounded-full bg-orange" />
               Poistoilma °C
             </span>
-            <span className="flex items-center gap-2">
-              <span className="inline-block h-3 w-8 rounded-full bg-sky-dusk" />
+            <span className="flex items-center gap-2 text-white/50">
+              <span className="inline-block h-0.5 w-6 rounded-full bg-sky-dusk" />
               Ulkoilma °C
             </span>
-            <span className="flex items-center gap-2">
-              <span className="inline-block h-2.5 w-2.5 rounded-full bg-fire-red" />
-              Anomalia havaittu
+            <span className="flex items-center gap-2 text-white/50">
+              <span className="inline-block h-2 w-2 rounded-full bg-fire-red" />
+              Anomalia
             </span>
           </div>
-          <ResponsiveContainer width="100%" height={280}>
+          <ResponsiveContainer width="100%" height={300}>
             <LineChart data={chartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis dataKey="t" tick={{ fontSize: 11, fill: '#7A7670' }} interval={11} />
-              <YAxis domain={[10, 70]} tick={{ fontSize: 11, fill: '#7A7670' }} unit="°" />
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
+              <XAxis dataKey="t" tick={{ fontSize: 10, fill: 'rgba(255,255,255,0.3)', fontFamily: 'var(--font-jetbrains)' }} interval={11} stroke="rgba(255,255,255,0.1)" />
+              <YAxis domain={[10, 70]} tick={{ fontSize: 10, fill: 'rgba(255,255,255,0.3)', fontFamily: 'var(--font-jetbrains)' }} unit="°" stroke="rgba(255,255,255,0.1)" />
               <Tooltip
-                contentStyle={{ background: '#2D2F33', border: 'none', borderRadius: '8px', color: '#fff', fontSize: '12px' }}
+                contentStyle={{ background: 'rgba(13,21,32,0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#fff', fontSize: '11px', fontFamily: 'var(--font-jetbrains)' }}
                 formatter={(v) => [`${v}°C`]}
               />
-              <ReferenceLine x="4:18" stroke="#E63946" strokeDasharray="4 2" label={{ value: 'Anomalia', fill: '#E63946', fontSize: 11 }} />
-              <ReferenceLine x="4:30" stroke="#2DC653" strokeDasharray="4 2" label={{ value: 'Hälytys → OK', fill: '#2DC653', fontSize: 11 }} />
+              <ReferenceLine x="4:18" stroke="#E63946" strokeDasharray="4 2" label={{ value: 'Anomalia', fill: '#E63946', fontSize: 10 }} />
+              <ReferenceLine x="4:30" stroke="#2DC653" strokeDasharray="4 2" label={{ value: 'OK', fill: '#2DC653', fontSize: 10 }} />
               <Line type="monotone" dataKey="exhaust" stroke="#F5641E" strokeWidth={2.5} dot={false} isAnimationActive={false} />
-              <Line type="monotone" dataKey="outdoor" stroke="#2C4A6B" strokeWidth={2} dot={false} isAnimationActive={false} strokeDasharray="5 2" />
+              <Line type="monotone" dataKey="outdoor" stroke="#2C4A6B" strokeWidth={1.5} dot={false} isAnimationActive={false} strokeDasharray="5 2" />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
-        {/* Testimonial */}
-        <div className="mt-10 rounded-2xl border border-orange/20 bg-orange/5 p-8">
-          <div className="flex flex-col items-start gap-6 md:flex-row">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-orange/20 text-2xl">
+        {/* Testimonial — editorial pull quote */}
+        <div className="curve-quote mt-12 relative rounded-2xl bg-white p-8 md:p-10 shadow-depth">
+          {/* Giant quotation mark */}
+          <span className="absolute -top-4 left-6 font-[var(--font-bebas-neue)] text-[120px] leading-none text-orange/10 select-none">&ldquo;</span>
+
+          <div className="relative flex flex-col gap-6 md:flex-row md:items-start">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange/20 to-grain-gold/10 text-2xl">
               👨‍🌾
             </div>
-            <div>
-              <blockquote className="mb-4 text-lg italic leading-relaxed text-charcoal md:text-xl">
+            <div className="min-w-0">
+              <blockquote className="mb-5 text-lg font-medium italic leading-relaxed text-charcoal md:text-xl">
                 &ldquo;{t('quote')}&rdquo;
               </blockquote>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-4">
                 <div>
-                  <p className="font-semibold text-charcoal">{t('name')}</p>
+                  <p className="font-[var(--font-space-grotesk)] font-bold text-charcoal">{t('name')}</p>
                   <p className="text-sm text-gray-500">{t('location')}</p>
                 </div>
-                <div className="ml-4 flex gap-0.5">
+                <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-orange">★</span>
+                    <span key={i} className="text-grain-gold text-sm">★</span>
                   ))}
                 </div>
               </div>

@@ -6,7 +6,10 @@
   font-display: swap;
 }
 
+/* ─── Design System: "Nordic Night Intelligence" ─── */
+
 :root {
+  /* Core palette */
   --orange: #F5641E;
   --charcoal: #2D2F33;
   --off-white: #F7F6F3;
@@ -20,6 +23,14 @@
   --safe-green: #2DC653;
   --background: #F7F6F3;
   --foreground: #2D2F33;
+
+  /* Extended palette */
+  --aurora-teal: #0A6B5C;
+  --sensor-blue: #3B82F6;
+  --frost-white: #F0F4F8;
+  --parchment: #FAF6F0;
+  --night-deep: #04090f;
+  --night-mid: #06101a;
 }
 
 @theme inline {
@@ -34,12 +45,21 @@
   --color-sky-night: var(--sky-night);
   --color-sky-dusk: var(--sky-dusk);
   --color-aurora: var(--aurora);
+  --color-aurora-teal: var(--aurora-teal);
+  --color-sensor-blue: var(--sensor-blue);
   --color-fire-red: var(--fire-red);
   --color-safe-green: var(--safe-green);
+  --color-frost-white: var(--frost-white);
+  --color-parchment: var(--parchment);
+  --color-night-deep: var(--night-deep);
+  --color-night-mid: var(--night-mid);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-space-grotesk);
-  --font-mono: var(--font-bebas-neue);
+  --font-mono: var(--font-jetbrains);
+  --font-display: var(--font-bebas-neue);
 }
+
+/* ─── Keyframe Animations ─── */
 
 @keyframes pulse-orange {
   0%, 100% { box-shadow: 0 0 0 0 rgba(245, 100, 30, 0.7); }
@@ -51,11 +71,184 @@
   50% { transform: translateY(-8px); }
 }
 
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes border-rotate {
+  0% { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
+@keyframes slide-underline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes aurora-shift {
+  0%, 100% { opacity: 0.12; filter: hue-rotate(0deg); }
+  50% { opacity: 0.2; filter: hue-rotate(30deg); }
+}
+
+@keyframes fog-drift {
+  0% { transform: translateX(-10%); opacity: 0.4; }
+  50% { opacity: 0.6; }
+  100% { transform: translateX(10%); opacity: 0.4; }
+}
+
+@keyframes count-up-fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Base Styles ─── */
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+::selection {
+  background: rgba(245, 100, 30, 0.25);
+  color: var(--charcoal);
+}
+
+/* ─── Scroll Progress Bar ─── */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--orange), var(--grain-gold));
+  z-index: 9999;
+  transition: width 50ms linear;
+  pointer-events: none;
+}
+
+/* ─── Film Grain Noise Overlay ─── */
+
+.noise-overlay::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ─── Glassmorphism Utilities ─── */
+
+.glass-dark {
+  background: rgba(13, 27, 42, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Depth Shadow System ─── */
+
+.shadow-depth-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-depth {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-depth-lg {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ─── Interactive Hover Utilities ─── */
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.hover-glow-orange {
+  transition: box-shadow 0.3s ease;
+}
+.hover-glow-orange:hover {
+  box-shadow: 0 0 20px rgba(245, 100, 30, 0.25), 0 0 60px rgba(245, 100, 30, 0.1);
+}
+
+/* ─── Link Underline Animation ─── */
+
+.link-slide-underline {
+  position: relative;
+}
+.link-slide-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.link-slide-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* ─── Monospace Data Styling ─── */
+
+.data-mono {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.data-unit {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 0.7em;
+  opacity: 0.6;
+  margin-left: 0.15em;
+}
+
+/* ─── Section Gradient Meshes ─── */
+
+.mesh-dark {
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 30%, rgba(10, 107, 92, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(245, 100, 30, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+}
+
+.mesh-warm {
+  background:
+    radial-gradient(ellipse 50% 50% at 30% 20%, rgba(232, 197, 71, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 75% 80%, rgba(245, 100, 30, 0.06) 0%, transparent 70%);
+}
+
+/* ─── Responsive Reduced Motion ─── */
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -63,5 +256,8 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  .noise-overlay::after {
+    display: none;
   }
 }

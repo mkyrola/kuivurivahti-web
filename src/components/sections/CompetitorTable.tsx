@@ -24,25 +24,25 @@ const PRICES = { seemoto: '€799', wiljami: '~€900', cauco: '€1 800', antti
 
 function Cell({ value, t, isSEEMOTO = false }: { value: CellValue; t: (k: string) => string; isSEEMOTO?: boolean }) {
   if (value === true) return (
-    <span className={`inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold ${isSEEMOTO ? 'bg-safe-green/20 text-safe-green' : 'text-safe-green'}`}>
+    <span className={`inline-flex items-center justify-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${isSEEMOTO ? 'bg-safe-green/20 text-safe-green' : 'text-safe-green/70'}`}>
       <Check className="h-3.5 w-3.5 mr-1" />{t('yes')}
     </span>
   );
   if (value === false) return (
-    <span className="inline-flex items-center justify-center text-gray-300">
+    <span className="inline-flex items-center justify-center text-white/15">
       <X className="h-4 w-4" />
     </span>
   );
   if (value === 'partial') return (
-    <span className="inline-flex items-center text-harvest-amber text-xs font-medium">
+    <span className="inline-flex items-center text-harvest-amber/70 text-xs font-medium">
       <Minus className="h-3.5 w-3.5 mr-1" />{t('partial')}
     </span>
   );
-  if (value === 'onlyAntti') return <span className="text-xs text-gray-400">{t('onlyAntti')}</span>;
+  if (value === 'onlyAntti') return <span className="text-xs text-white/25">{t('onlyAntti')}</span>;
   if (value === 'under30min') return (
-    <span className={`text-xs font-semibold ${isSEEMOTO ? 'text-safe-green' : 'text-charcoal'}`}>{t('under30min')}</span>
+    <span className={`text-xs font-semibold ${isSEEMOTO ? 'text-safe-green' : 'text-white/50'}`}>{t('under30min')}</span>
   );
-  return <span className="text-xs text-gray-500">{value}</span>;
+  return <span className="text-xs text-white/40">{value}</span>;
 }
 
 export function CompetitorTable() {
@@ -50,70 +50,68 @@ export function CompetitorTable() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.fromTo(
-      '.comp-row',
-      { opacity: 0, y: 15 },
-      {
-        opacity: 1,
-        y: 0,
-        stagger: 0.07,
-        duration: 0.4,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 75%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
+    gsap.fromTo('.comp-head', { opacity: 0, y: 24 }, {
+      opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
+      scrollTrigger: { trigger: '.comp-head', start: 'top 85%' },
+    });
+    gsap.fromTo('.comp-row', { opacity: 0, y: 12 }, {
+      opacity: 1, y: 0, stagger: 0.06, duration: 0.4, ease: 'power2.out',
+      scrollTrigger: { trigger: containerRef.current, start: 'top 70%' },
+    });
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="bg-off-white py-24 px-6">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="mb-12 text-center font-[var(--font-space-grotesk)] text-3xl font-bold text-charcoal md:text-4xl">
-          {t('headline')}
-        </h2>
-        <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+    <section ref={containerRef} className="relative bg-night-deep py-28 px-6 overflow-hidden">
+      <div className="absolute inset-0 mesh-dark pointer-events-none" />
+
+      <div className="relative mx-auto max-w-5xl">
+        <div className="comp-head mb-12 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-orange/60 data-mono">Comparison</p>
+          <h2 className="font-[var(--font-space-grotesk)] text-3xl font-bold text-white md:text-4xl lg:text-5xl tracking-tight">
+            {t('headline')}
+          </h2>
+        </div>
+
+        <div className="overflow-x-auto rounded-2xl glass-card">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-100">
-                <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-gray-400">{t('feature')}</th>
-                <th className="px-4 py-4 text-center bg-charcoal/5 border-x border-orange/20">
-                  <div className="font-[var(--font-space-grotesk)] text-sm font-bold text-charcoal">SEEMOTO</div>
-                  <div className="text-xs font-bold text-orange">KUIVURIVAHTI</div>
+              <tr className="border-b border-white/5">
+                <th className="px-6 py-4 text-left text-[10px] font-bold uppercase tracking-widest text-white/30 data-mono">{t('feature')}</th>
+                <th className="px-4 py-4 text-center bg-orange/5 border-x border-orange/10">
+                  <div className="font-[var(--font-space-grotesk)] text-sm font-bold text-white">SEEMOTO</div>
+                  <div className="data-mono text-[10px] font-bold text-orange tracking-wider">KUIVURIVAHTI</div>
                 </th>
-                <th className="px-4 py-4 text-center text-xs font-semibold text-gray-400">Wiljami</th>
-                <th className="px-4 py-4 text-center text-xs font-semibold text-gray-400">Cauco CL</th>
-                <th className="px-4 py-4 text-center text-xs font-semibold text-gray-400">Antti Optima</th>
+                <th className="px-4 py-4 text-center text-[10px] font-bold uppercase tracking-widest text-white/25 data-mono">Wiljami</th>
+                <th className="px-4 py-4 text-center text-[10px] font-bold uppercase tracking-widest text-white/25 data-mono">Cauco CL</th>
+                <th className="px-4 py-4 text-center text-[10px] font-bold uppercase tracking-widest text-white/25 data-mono hidden sm:table-cell">Antti Optima</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y divide-white/5">
               {ROWS.map(({ key, seemoto, wiljami, cauco, antti }) => (
-                <tr key={key} className="comp-row hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 font-medium text-charcoal">{t(key)}</td>
-                  <td className="px-4 py-4 text-center bg-charcoal/5 border-x border-orange/10">
+                <tr key={key} className="comp-row hover:bg-white/[0.02] transition-colors">
+                  <td className="px-6 py-3.5 font-medium text-white/70 text-sm">{t(key)}</td>
+                  <td className="px-4 py-3.5 text-center bg-orange/5 border-x border-orange/10">
                     <Cell value={seemoto} t={t} isSEEMOTO />
                   </td>
-                  <td className="px-4 py-4 text-center"><Cell value={wiljami} t={t} /></td>
-                  <td className="px-4 py-4 text-center"><Cell value={cauco} t={t} /></td>
-                  <td className="px-4 py-4 text-center"><Cell value={antti} t={t} /></td>
+                  <td className="px-4 py-3.5 text-center"><Cell value={wiljami} t={t} /></td>
+                  <td className="px-4 py-3.5 text-center"><Cell value={cauco} t={t} /></td>
+                  <td className="px-4 py-3.5 text-center hidden sm:table-cell"><Cell value={antti} t={t} /></td>
                 </tr>
               ))}
               {/* Price row */}
-              <tr className="comp-row bg-gray-50 font-semibold">
-                <td className="px-6 py-4 text-charcoal">{t('price')}</td>
-                <td className="px-4 py-4 text-center bg-charcoal/5 border-x border-orange/20">
-                  <span className="font-[var(--font-bebas-neue)] text-xl text-orange">{PRICES.seemoto}</span>
+              <tr className="comp-row border-t border-white/10">
+                <td className="px-6 py-4 font-bold text-white/80">{t('price')}</td>
+                <td className="px-4 py-4 text-center bg-orange/5 border-x border-orange/10">
+                  <span className="data-mono text-2xl font-bold text-orange">{PRICES.seemoto}</span>
                 </td>
-                <td className="px-4 py-4 text-center text-gray-500">{PRICES.wiljami}</td>
-                <td className="px-4 py-4 text-center text-gray-500">{PRICES.cauco}</td>
-                <td className="px-4 py-4 text-center text-gray-500">{PRICES.antti}</td>
+                <td className="px-4 py-4 text-center data-mono text-white/30">{PRICES.wiljami}</td>
+                <td className="px-4 py-4 text-center data-mono text-white/30">{PRICES.cauco}</td>
+                <td className="px-4 py-4 text-center data-mono text-white/30 hidden sm:table-cell">{PRICES.antti}</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p className="mt-4 text-center text-xs text-gray-400">* Hintatiedot verkkosivuilta, maaliskuu 2026</p>
+        <p className="mt-4 text-center text-xs text-white/20 data-mono">* Hintatiedot verkkosivuilta, maaliskuu 2026</p>
       </div>
     </section>
   );

@@ -3,16 +3,17 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { Space_Grotesk, Inter, Bebas_Neue } from 'next/font/google';
+import { Space_Grotesk, Inter, Bebas_Neue, JetBrains_Mono } from 'next/font/google';
 import '../globals.css';
 import { Navigation } from '@/components/layout/Navigation';
 import { Footer } from '@/components/layout/Footer';
 import { LenisProvider } from '@/components/layout/LenisProvider';
+import { ScrollProgress } from '@/components/ui/ScrollProgress';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
-  weight: ['600', '700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -27,6 +28,13 @@ const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
   variable: '--font-bebas-neue',
   weight: '400',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains',
+  weight: ['400', '500', '700'],
   display: 'swap',
 });
 
@@ -75,10 +83,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${spaceGrotesk.variable} ${inter.variable} ${bebasNeue.variable}`}>
-      <body className="bg-off-white text-charcoal antialiased">
+    <html lang={locale} className={`${spaceGrotesk.variable} ${inter.variable} ${bebasNeue.variable} ${jetbrainsMono.variable}`}>
+      <body className="noise-overlay bg-off-white text-charcoal antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LenisProvider>
+            <ScrollProgress />
             <Navigation />
             <main>{children}</main>
             <Footer />
