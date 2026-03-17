@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "SEEMOTO KUIVURIVAHTI — KI-gestützte Getreidetrockner-Überwachung",
+    "description": "Der einzige Getreidetrockner-Monitor mit KI. Brandwarnung 10–15 Min. im Voraus. Ablufttemperatur und -feuchtigkeit. 4G + Akku. Installation unter 30 Min. Made in Finland."
+  },
+  "nav": {
+    "product": "Produkt",
+    "howItWorks": "Wie es funktioniert",
+    "pricing": "Preise",
+    "customers": "Kunden",
+    "support": "Support",
+    "contact": "Kontakt",
+    "demo": "Demo bestellen",
+    "language": "Sprache"
+  },
+  "hero": {
+    "time": "02:47 Uhr.",
+    "dryer": "Der Trockner läuft.",
+    "youSleep": "Du schläfst.",
+    "tagline": "Der einzige Trocknerwächter, der nie schläft.",
+    "subTagline": "KI-gestützte Getreidetrockner-Überwachung. Brandwarnung 10–15 Min. im Voraus. Installation unter 30 Minuten.",
+    "cta1": "Demo bestellen",
+    "cta2": "So funktioniert es",
+    "exhaust": "Abluft",
+    "riseRate": "Anstiegsrate",
+    "anomaly": "ANOMALIE",
+    "checkDryer": "Trockner prüfen — Temperatur steigt schnell",
+    "closedRemotely": "Ferngesteuert abgeschaltet. Alles in Ordnung.",
+    "backToSleep": "Zurück zum Schlaf. 04:15 Uhr.",
+    "buttonPresses": "3 Tastendrücke später...",
+    "stat1": "13.000",
+    "stat1Label": "Trockner in Finnland",
+    "stat2": "60–80",
+    "stat2Label": "Brände pro Jahr",
+    "stat3": "€50K–500K",
+    "stat3Label": "durchschnittlicher Schaden"
+  },
+  "problem": {
+    "headline": "3.000 Trockner ohne Fernüberwachung. Jeden Herbst.",
+    "card1Title": "Schlafmangel",
+    "card1Text": "In der Erntesaison wachen Landwirte um 2–4 Uhr nachts auf, um den Trockner zu kontrollieren. 4–6 Wochen jeden Herbst. Über 200 Stunden verlorener Schlaf.",
+    "card2Title": "Brandgefahr ist real",
+    "card2Text": "60–80 Getreidetrocknerbrände pro Jahr in Finnland. Durchschnittlicher Schaden 50.000–500.000 Euro. Hauptursache: unüberwachte Überhitzung.",
+    "card3Title": "Übertrocknung kostet",
+    "card3Text": "Ein Prozentpunkt zu trocken = 300–500 € Verlust pro Charge. Landwirte trocknen sicherheitshalber zu viel — Energie und Getreide gehen verloren."
+  },
+  "features": {
+    "headline": "Ein Gerät. Drei Sensoren. KI.",
+    "temp": { "title": "Temperatur + Feuchtigkeit", "text": "Das einzige Gerät, das beides misst. Temperatur zeigt was passiert — Feuchtigkeit zeigt wann das Getreide trocken ist." },
+    "ai": { "title": "KI-gestützte Brandwarnung", "text": "Erkennt abnormale Temperaturanstiegsraten 10–15 Min. vor kritischen Situationen." },
+    "alert": { "title": "Alarm auf drei Wegen", "text": "Push-Nachricht, SMS und Sprachanruf. Weckt Sie auch wenn das Telefon auf lautlos steht." },
+    "weather": { "title": "Wettergestützte Trocknungsplanung", "text": "72h Trocknungsfenster-Prognose. Frostvorhersage. Gewitterwarnung. NordPool Strompreis." },
+    "fourG": { "title": "4G + 8h Akku", "text": "Funktioniert ohne Heimnetzwerk. Funktioniert bei Stromausfall. Deckt ganz Finnland ab." },
+    "install": { "title": "Installation unter 30 Min.", "text": "Kein Elektriker nötig. Sensor am Abluftrohr befestigen — fertig." },
+    "ce": { "title": "CE + Made in Finland", "text": "Industriestandard. -40°C Frostbeständigkeit." },
+    "brand": { "title": "Kompatibel mit allen Marken", "text": "Antti, Mepu, Opico — Marke spielt keine Rolle. Wenn es ein Abluftrohr hat, passt SEEMOTO KUIVURIVAHTI." }
+  },
+  "weather": {
+    "headline": "Wann ist die beste Trocknungszeit heute auf Ihrem Hof?",
+    "locationPlaceholder": "Z.B. Tampere, Seinäjoki...",
+    "grains": { "ohra": "Gerste", "kaura": "Hafer", "vehnä": "Weizen", "rapsi": "Raps", "ruis": "Roggen" },
+    "windowsTitle": "TROCKNUNGSFENSTER — NÄCHSTE 72 STUNDEN",
+    "ratings": { "best": "Ausgezeichnet", "good": "Gut", "poor": "Schwach", "avoid": "Vermeiden — Regen" },
+    "lightningClear": "Keine Gewitter in Ihrer Region in den nächsten 48h",
+    "lightningWarning": "Blitz {distance} km von Ihrem Hof entfernt",
+    "frostWarning": "Erster Frost prognostiziert: {date} um {time}",
+    "nordpool": "NordPool Spot-Preis jetzt: {price} Cent/kWh",
+    "poweredBy": "Daten: Finnisches Meteorologisches Institut + Open-Meteo"
+  },
+  "sensor": {
+    "headline": "Industrielle Sensortechnologie",
+    "pt100": "PT100 Temperatursensor (±0.1°C)",
+    "sht41": "SHT41 Feuchtigkeitssensor (±1.5%RH)",
+    "nrf": "nRF9161 4G LTE-M",
+    "battery": "8h Akku — funktioniert bei Stromausfall",
+    "ip67": "IP67 — regen- und staubfest",
+    "ce": "CE-zertifiziert"
+  },
+  "testimonial": {
+    "title": "Veijo Hujus Trockner. August 2025. 6.478 Messungen.",
+    "quote": "Zum ersten Mal seit 15 Jahren habe ich während der Erntesaison die ganze Nacht durchgeschlafen. Als der Alarm um 3:47 kam, habe ich den Trockner vom Handy aus abgeschaltet. Musste nicht aufstehen.",
+    "name": "Veijo Huju",
+    "location": "Sastamala, Pirkanmaa"
+  },
+  "competitor": {
+    "headline": "Vergleich mit Wettbewerbern",
+    "feature": "Funktion",
+    "remote": "Fernüberwachung",
+    "exhaustHumidity": "Abluftfeuchtigkeit",
+    "aiFireAlert": "KI-Brandalarm",
+    "allBrands": "Alle Marken",
+    "selfInstall": "Eigeninstallation",
+    "fourGBattery": "4G + Akku",
+    "price": "Preis",
+    "yes": "Ja",
+    "no": "Nein",
+    "partial": "Teilweise",
+    "onlyAntti": "Nur Antti",
+    "under30min": "<30min"
+  },
+  "pricing": {
+    "headline": "Klare Preise. Keine Überraschungen.",
+    "starter": {
+      "name": "STARTER",
+      "price": "€799",
+      "period": "einmalig",
+      "features": ["Temperatur + Feuchtigkeitsmessung", "4G-Verbindung", "SMS-Alarme", "Mobile App", "24 Mon. Garantie"]
+    },
+    "pro": {
+      "name": "PRO",
+      "price": "€799 + €25/Mon.",
+      "period": "",
+      "badge": "BELIEBTESTE",
+      "features": ["Alle Starter-Funktionen", "KI-gestützte Brandwarnung", "Trocknungsfenster-Prognose", "ETA für Trocknungszeit", "Energieverfolgung", "Sprachanruf-Alarm", "90-Tage-Geld-zurück-Garantie"]
+    },
+    "fleet": {
+      "name": "FLOTTE",
+      "price": "Angebot anfragen",
+      "period": "",
+      "features": ["5+ Trockner", "Flottenmanagement-Dashboard", "API-Integration", "4h SLA Reaktionszeit", "Dedizierter Ansprechpartner"]
+    },
+    "subsidy": "Lebensmittelbehörde Investitionsförderung: bis zu 40% der Hardwarekosten. Wir helfen beim Antrag.",
+    "leasing": "Miete €49/Mon. — beinhaltet Gerät, Pro-Abonnement und Installationssupport.",
+    "guarantee": "90-Tage-Geld-zurück-Garantie. Kein Risiko."
+  },
+  "roadmap": {
+    "headline": "KI verbessert sich jede Erntesaison",
+    "items": [
+      { "year": "2025", "title": "Brandwarnung", "text": "Erkennung von Temperaturanomalien 10–15 Min. im Voraus" },
+      { "year": "2026", "title": "Trockenheitsvorhersage", "text": "Genaue Trocknungszeit aus Abluftfeuchtigkeit vorhersagen" },
+      { "year": "2027", "title": "Energieoptimierung", "text": "Automatische Trocknungsparameteranpassung basierend auf Strompreis" }
+    ]
+  },
+  "cta": {
+    "headline": "SEEMOTO KUIVURIVAHTI",
+    "subHeadline": "Bestellen Sie Ihre Demo heute.",
+    "delivery": "Lieferung in 5 Werktagen.",
+    "guarantee": "90-Tage-Geld-zurück-Garantie.",
+    "button1": "Demo bestellen",
+    "button2": "Broschüre PDF herunterladen",
+    "badges": ["Made in Finland", "CE-zertifiziert", "Business Finland gefördert"]
+  },
+  "contact": {
+    "headline": "Kontaktieren Sie uns",
+    "name": "Name",
+    "phone": "Telefonnummer",
+    "email": "E-Mail",
+    "location": "Ort",
+    "dryerBrand": "Trocknermarke",
+    "message": "Nachricht",
+    "submit": "Senden",
+    "success": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+    "phoneNumber": "+358 45 125 9000"
+  },
+  "footer": {
+    "tagline": "Ihr Trocknerwächter — sehen Sie alles, wo immer Sie sind.",
+    "company": "© 2026 MWW / SeeMoto Oy. Made in Finland.",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "cookies": "Cookies"
+  }
+}

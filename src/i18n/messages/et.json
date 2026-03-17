@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "SEEMOTO KUIVURIVAHTI — Tehisintellektil põhinev teraviljakuivati kaugseire",
+    "description": "Ainus tehisintellektiga teraviljakuivati monitor. Tulekahjuhoiatus 10–15 min ette. Väljatõmbe temperatuur ja niiskus. 4G + aku. Paigaldamine alla 30 min. Toodetud Soomes."
+  },
+  "nav": {
+    "product": "Toode",
+    "howItWorks": "Kuidas toimib",
+    "pricing": "Hinnad",
+    "customers": "Kliendid",
+    "support": "Tugi",
+    "contact": "Kontakt",
+    "demo": "Telli demo",
+    "language": "Keel"
+  },
+  "hero": {
+    "time": "Kell 02:47.",
+    "dryer": "Kuivati töötab.",
+    "youSleep": "Sina magad.",
+    "tagline": "Ainus kuivativahti, mis ei maga kunagi.",
+    "subTagline": "Tehisintellektil põhinev teraviljakuivati kaugseire. Tulekahjuhoiatus 10–15 min ette. Paigaldamine alla 30 minuti.",
+    "cta1": "Telli demo",
+    "cta2": "Vaata kuidas toimib",
+    "exhaust": "Väljatõmbeõhk",
+    "riseRate": "Tõusu kiirus",
+    "anomaly": "ANOMAALIA",
+    "checkDryer": "Kontrolli kuivatit — temperatuur tõuseb kiiresti",
+    "closedRemotely": "Kaugjuhtimisega suletud. Kõik korras.",
+    "backToSleep": "Tagasi unne. Kell 04:15.",
+    "buttonPresses": "3 nupuvajutust hiljem...",
+    "stat1": "13 000",
+    "stat1Label": "kuivatit Soomes",
+    "stat2": "60–80",
+    "stat2Label": "tulekahju aastas",
+    "stat3": "€50K–500K",
+    "stat3Label": "keskmine kahju"
+  },
+  "problem": {
+    "headline": "3 000 kuivatit ilma kaugseireta. Igal sügisel.",
+    "card1Title": "Unevaegus",
+    "card1Text": "Lõikushooajal ärkab põllumees kell 2–4 öösel kuivatit kontrollima. 4–6 nädalat igal sügisel. Üle 200 tunni kaotatud und.",
+    "card2Title": "Tuleoht on reaalne",
+    "card2Text": "60–80 teraviljakuivati põlengut aastas Soomes. Keskmine kahju 50 000–500 000 eurot. Peamine põhjus: jälgimata ülekuumenemine.",
+    "card3Title": "Ülekuivatamine maksab",
+    "card3Text": "Üks protsendipunkt liiga kuiv = 300–500 € kahjum partii kohta. Põllumehed kuivatavad turvalisuse mõttes üle — energiat ja teravilja läheb raisku."
+  },
+  "features": {
+    "headline": "Üks seade. Kolm andurit. Tehisintellekt.",
+    "temp": { "title": "Temperatuur + niiskus", "text": "Ainus seade, mis mõõdab mõlemat. Temperatuur ütleb, mis toimub — niiskus ütleb, millal teravili on kuiv." },
+    "ai": { "title": "Tehisintellektil põhinev tulekahjuhoiatus", "text": "Tuvastab ebanormaalsed temperatuuri tõusukiirused 10–15 min enne kriitilisi olukordi." },
+    "alert": { "title": "Häire kolmel viisil", "text": "Push-teade, SMS ja kõne. Äratab ka siis, kui telefon on hääletu peal." },
+    "weather": { "title": "Ilmateadlik kuivatuse planeerimine", "text": "72h kuivatusakna prognoos. Külmaprognoos. Äikesehoiatus. NordPool elektrihind." },
+    "fourG": { "title": "4G + 8h aku", "text": "Töötab ilma koduvõrguta. Töötab elektrikatkestuse ajal. Katab kogu Soome." },
+    "install": { "title": "Paigaldamine alla 30 min", "text": "Elektrikut pole vaja. Kinnitage andur väljatõmbetorusse — valmis." },
+    "ce": { "title": "CE + Toodetud Soomes", "text": "Tööstusstandard. -40°C külmakindlus." },
+    "brand": { "title": "Sobib kõigi markidega", "text": "Antti, Mepu, Opico — mark pole oluline. Kui sellel on väljatõmbetoru, siis SEEMOTO KUIVURIVAHTI sobib." }
+  },
+  "weather": {
+    "headline": "Milline on parim kuivatusaeg täna sinu talus?",
+    "locationPlaceholder": "Nt Tampere, Seinäjoki...",
+    "grains": { "ohra": "Oder", "kaura": "Kaer", "vehnä": "Nisu", "rapsi": "Raps", "ruis": "Rukis" },
+    "windowsTitle": "KUIVATUSAKNAD — JÄRGMISED 72 TUNDI",
+    "ratings": { "best": "Suurepärane", "good": "Hea", "poor": "Nõrk", "avoid": "Väldi — vihm" },
+    "lightningClear": "Äikest ei ole teie piirkonnas järgmise 48h jooksul",
+    "lightningWarning": "Välk {distance} km kaugusel teie talust",
+    "frostWarning": "Esimene öökülm ennustatud: {date} kell {time}",
+    "nordpool": "NordPool spot-hind praegu: {price} snt/kWh",
+    "poweredBy": "Andmed: Soome Meteoroloogia Instituut + Open-Meteo"
+  },
+  "sensor": {
+    "headline": "Tööstuslik andurite tehnoloogia",
+    "pt100": "PT100 temperatuuriandur (±0.1°C)",
+    "sht41": "SHT41 niiskusandur (±1.5%RH)",
+    "nrf": "nRF9161 4G LTE-M",
+    "battery": "8h aku — töötab elektrikatkestuse ajal",
+    "ip67": "IP67 — vihmakindel ja tolmukindel",
+    "ce": "CE-sertifitseeritud"
+  },
+  "testimonial": {
+    "title": "Veijo Huju kuivati. August 2025. 6 478 mõõtmist.",
+    "quote": "Esimest korda 15 aasta jooksul magasin terve öö läbi lõikushooajal. Kui häire tuli kell 3:47, lülitasin kuivati telefoniga välja. Ei pidanud voodist tõusma.",
+    "name": "Veijo Huju",
+    "location": "Sastamala, Pirkanmaa"
+  },
+  "competitor": {
+    "headline": "Võrdlus konkurentidega",
+    "feature": "Funktsioon",
+    "remote": "Kaugseire",
+    "exhaustHumidity": "Väljatõmbe niiskus",
+    "aiFireAlert": "Tehisintellekti tulehäire",
+    "allBrands": "Kõik margid",
+    "selfInstall": "Isepaigaldamine",
+    "fourGBattery": "4G + aku",
+    "price": "Hind",
+    "yes": "Jah",
+    "no": "Ei",
+    "partial": "Osaliselt",
+    "onlyAntti": "Ainult Antti",
+    "under30min": "<30min"
+  },
+  "pricing": {
+    "headline": "Selge hinnastamine. Üllatusteta.",
+    "starter": {
+      "name": "STARTER",
+      "price": "€799",
+      "period": "ühekordne",
+      "features": ["Temperatuuri + niiskuse mõõtmine", "4G-ühendus", "SMS-häired", "Mobiilirakendus", "24 kuu garantii"]
+    },
+    "pro": {
+      "name": "PRO",
+      "price": "€799 + €25/kuu",
+      "period": "",
+      "badge": "POPULAARSEIM",
+      "features": ["Kõik Starter funktsioonid", "Tehisintellekti tulekahjuhoiatus", "Kuivatusakna prognoos", "Kuivamisaja prognoos", "Energiajälgimine", "Kõnehäire", "90-päevane raha-tagasi garantii"]
+    },
+    "fleet": {
+      "name": "LAEVASTIK",
+      "price": "Küsi pakkumist",
+      "period": "",
+      "features": ["5+ kuivatit", "Laevastiku juhtpaneel", "API-integratsioon", "4h SLA reageerimisaeg", "Isiklik kontaktisik"]
+    },
+    "subsidy": "Toiduamet investeeringutoetus: kuni 40% riistvara hinnast. Aitame taotlusega.",
+    "leasing": "Üür €49/kuu — sisaldab seadet, Pro-tellimust ja paigaldustuge.",
+    "guarantee": "90-päevane raha-tagasi garantii. Riskivaba."
+  },
+  "roadmap": {
+    "headline": "Tehisintellekt paraneb igal lõikushooajal",
+    "items": [
+      { "year": "2025", "title": "Tulekahjuhoiatus", "text": "Temperatuuri anomaalia tuvastamine 10–15 min ette" },
+      { "year": "2026", "title": "Kuivuseennustus", "text": "Täpse kuivamisaja ennustamine väljatõmbe niiskusest" },
+      { "year": "2027", "title": "Energiaoptimeerimine", "text": "Automaatne kuivatusparameetrite kohandamine elektrihinna järgi" }
+    ]
+  },
+  "cta": {
+    "headline": "SEEMOTO KUIVURIVAHTI",
+    "subHeadline": "Telli oma demo täna.",
+    "delivery": "Tarneaeg 5 tööpäeva.",
+    "guarantee": "90-päevane raha-tagasi garantii.",
+    "button1": "Telli demo",
+    "button2": "Laadi alla brošüür PDF",
+    "badges": ["Toodetud Soomes", "CE-sertifitseeritud", "Business Finland toetatud"]
+  },
+  "contact": {
+    "headline": "Võta ühendust",
+    "name": "Nimi",
+    "phone": "Telefoninumber",
+    "email": "E-post",
+    "location": "Asukoht",
+    "dryerBrand": "Kuivati mark",
+    "message": "Sõnum",
+    "submit": "Saada",
+    "success": "Aitäh! Võtame teiega ühendust 24h jooksul.",
+    "phoneNumber": "+358 45 125 9000"
+  },
+  "footer": {
+    "tagline": "Sinu kuivativahti — näe kõike, kus iganes oled.",
+    "company": "© 2026 MWW / SeeMoto Oy. Toodetud Soomes.",
+    "privacy": "Privaatsus",
+    "terms": "Tingimused",
+    "cookies": "Küpsised"
+  }
+}

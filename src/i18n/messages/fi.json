@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "SEEMOTO KUIVURIVAHTI — Tekoälypohjainen viljankuivurin etävalvonta",
+    "description": "Ainoa viljankuivurin valvontalaite tekoälyllä. Palovaroitus 10–15 min etukäteen. Poistoilman lämpötila ja kosteus. 4G + akku. Asennus alle 30 min. Valmistettu Suomessa."
+  },
+  "nav": {
+    "product": "Tuote",
+    "howItWorks": "Miten toimii",
+    "pricing": "Hinnat",
+    "customers": "Asiakkaat",
+    "support": "Tuki",
+    "contact": "Ota yhteyttä",
+    "demo": "Tilaa demo",
+    "language": "Kieli"
+  },
+  "hero": {
+    "time": "Kello 02:47.",
+    "dryer": "Kuivuri käy.",
+    "youSleep": "Sinä nukut.",
+    "tagline": "Ainoa kuivurivahti, joka ei koskaan nuku.",
+    "subTagline": "Tekoälypohjainen viljankuivurin etävalvonta. Palovaroitus 10–15 min etukäteen. Asennusaika alle 30 minuuttia.",
+    "cta1": "Tilaa demo",
+    "cta2": "Katso miten toimii",
+    "exhaust": "Poistoilma",
+    "riseRate": "Nousunopeus",
+    "anomaly": "ANOMALIA",
+    "checkDryer": "Tarkista kuivuri — lämpötila nousee nopeasti",
+    "closedRemotely": "Suljettu etänä. Kaikki kunnossa.",
+    "backToSleep": "Takaisin uneen. 04:15 AM.",
+    "buttonPresses": "3 napin painallusta myöhemmin...",
+    "stat1": "13 000",
+    "stat1Label": "kuivuria Suomessa",
+    "stat2": "60–80",
+    "stat2Label": "tulipaloa vuodessa",
+    "stat3": "€50K–500K",
+    "stat3Label": "vahinko keskimäärin"
+  },
+  "problem": {
+    "headline": "3 000 kuivuria ilman etävalvontaa. Joka syksy.",
+    "card1Title": "Uni jää lyhyeksi",
+    "card1Text": "Satokaudella viljelijä herää klo 2–4 aamulla tarkastamaan kuivurin. 4–6 viikkoa joka syksy. Yli 200 tuntia menetettyä unta.",
+    "card2Title": "Tulipalovaara on todellinen",
+    "card2Text": "60–80 viljankuivuripaloa vuodessa Suomessa. Keskimääräinen vahinko 50 000–500 000 euroa. Suurin syy: valvomaton ylilämpö.",
+    "card3Title": "Ylikuivaus maksaa",
+    "card3Text": "Yksi prosenttiyksikkö liikaa kuivattuna = 300–500 € häviö per erä. Viljelijä kuivaa varmuuden vuoksi — energiaa ja viljaa hukkaan."
+  },
+  "features": {
+    "headline": "Yksi laite. Kolme sensoria. Tekoäly.",
+    "temp": { "title": "Lämpötila + kosteus", "text": "Ainoa laite, joka mittaa molemmat. Lämpötila kertoo mitä tapahtuu — kosteus kertoo milloin vilja on kuiva." },
+    "ai": { "title": "Tekoälypohjainen palovaroitus", "text": "Tunnistaa epänormaalit lämpötilanousunopeudet 10–15 min ennen kriittistä tilannetta." },
+    "alert": { "title": "Hälytys kolmella tavalla", "text": "Push-ilmoitus, SMS ja äänisoitto. Herää vaikka puhelin olisi äänettömällä." },
+    "weather": { "title": "Säätietoinen kuivaussuunnittelu", "text": "72h kuivausikkunaennuste. Hallaennuste. Ukkosmyrskyhälytys. NordPool sähkönhinta." },
+    "fourG": { "title": "4G + 8h akku", "text": "Toimii ilman kotiverkkoa. Toimii sähkökatkon aikana. Koko Suomi kattaa." },
+    "install": { "title": "Asennus alle 30 min", "text": "Ei sähkömiestä. Kiinnitä anturi poistoputkeen — valmis." },
+    "ce": { "title": "CE + Valmistettu Suomessa", "text": "Teollisuuden standardit. -40°C pakkaskestävyys." },
+    "brand": { "title": "Sopii kaikkiin merkkeihin", "text": "Antti, Mepu, Opico — merkkiä ei väliä. Jos siinä on poistoputki, SEEMOTO KUIVURIVAHTI sopii." }
+  },
+  "weather": {
+    "headline": "Mikä on paras kuivausaika tänään sinun tilallasi?",
+    "locationPlaceholder": "Esim. Tampere, Seinäjoki...",
+    "grains": { "ohra": "Ohra", "kaura": "Kaura", "vehnä": "Vehnä", "rapsi": "Rapsi/rypsi", "ruis": "Ruis" },
+    "windowsTitle": "KUIVAUSIKKUNAT — SEURAAVAT 72 TUNTIA",
+    "ratings": { "best": "Erinomainen", "good": "Hyvä", "poor": "Heikko", "avoid": "Vältä — sade" },
+    "lightningClear": "Ei ukkosia alueellasi seuraavien 48h aikana",
+    "lightningWarning": "Ukkonen {distance} km päässä tilastasi",
+    "frostWarning": "Ensimmäinen halla ennustettu: {date} klo {time}",
+    "nordpool": "NordPool spot-hinta nyt: {price} snt/kWh",
+    "poweredBy": "Tiedot: Ilmatieteen laitos + Open-Meteo"
+  },
+  "sensor": {
+    "headline": "Teollisuustason anturitekniikka",
+    "pt100": "PT100 lämpötila-anturi (±0.1°C)",
+    "sht41": "SHT41 kosteusanturi (±1.5%RH)",
+    "nrf": "nRF9161 4G LTE-M",
+    "battery": "8h akku — toimii sähkökatkon aikana",
+    "ip67": "IP67 — kestää sateen ja pölyn",
+    "ce": "CE-merkintä"
+  },
+  "testimonial": {
+    "title": "Veijo Hujun kuivuri. Elokuu 2025. 6 478 mittausta.",
+    "quote": "Ensimmäistä kertaa 15 vuoteen nukuin koko yön satokauden aikana. Kun hälytys tuli klo 3:47, sammutin kuivurin puhelimella. En tarvinnut nousta sängyltä.",
+    "name": "Veijo Huju",
+    "location": "Sastamala, Pirkanmaa"
+  },
+  "competitor": {
+    "headline": "Vertailu kilpailijoihin",
+    "feature": "Ominaisuus",
+    "remote": "Etävalvonta",
+    "exhaustHumidity": "Poistoilman kosteus",
+    "aiFireAlert": "Tekoälypalovaroitus",
+    "allBrands": "Kaikki merkit",
+    "selfInstall": "Oma asennus",
+    "fourGBattery": "4G + akku",
+    "price": "Hinta",
+    "yes": "Kyllä",
+    "no": "Ei",
+    "partial": "Osittain",
+    "onlyAntti": "Vain Antti",
+    "under30min": "<30min"
+  },
+  "pricing": {
+    "headline": "Selkeä hinnoittelu. Ei yllätyksiä.",
+    "starter": {
+      "name": "STARTER",
+      "price": "€799",
+      "period": "kertamaksu",
+      "features": ["Lämpötila + kosteus -mittaus", "4G-yhteys", "SMS-hälytykset", "Mobiilisovellus", "24kk takuu"]
+    },
+    "pro": {
+      "name": "PRO",
+      "price": "€799 + €25/kk",
+      "period": "",
+      "badge": "SUOSITUIN",
+      "features": ["Kaikki Starter-ominaisuudet", "Tekoälypohjainen palovaroitus", "Kuivausikkunaennuste", "ETA-ennuste kuivumisajalle", "Energianseuranta", "Äänisoittohälytys", "90 päivän rahat takaisin -takuu"]
+    },
+    "fleet": {
+      "name": "FLOTTA",
+      "price": "Kysy tarjous",
+      "period": "",
+      "features": ["5+ kuivuria", "Laivueen hallintapaneeli", "API-integraatio", "SLA 4h vasteaika", "Oma yhteyshenkilö"]
+    },
+    "subsidy": "Ruokavirasto investointituki: jopa 40% laitteistohinnasta. Me autamme hakuprosessissa.",
+    "leasing": "Vuokraa €49/kk — sisältää laitteen, Pro-tilauksen ja asennustuen.",
+    "guarantee": "90 päivän rahat takaisin -takuu. Ei riskiä."
+  },
+  "roadmap": {
+    "headline": "Tekoäly kehittyy joka satokausi",
+    "items": [
+      { "year": "2025", "title": "Palovaroitus", "text": "Lämpötila-anomalioiden tunnistus 10–15 min etukäteen" },
+      { "year": "2026", "title": "Kuivuusennuste", "text": "Poistoilman kosteudesta tarkan kuivumisajan ennustaminen" },
+      { "year": "2027", "title": "Energiaoptimointi", "text": "Automaattinen kuivausparametrien säätö sähkönhinnan mukaan" }
+    ]
+  },
+  "cta": {
+    "headline": "SEEMOTO KUIVURIVAHTI",
+    "subHeadline": "Tilaa demo tänään.",
+    "delivery": "Toimitusaika 5 arkipäivää.",
+    "guarantee": "90 päivän rahat takaisin -takuu.",
+    "button1": "Tilaa demo",
+    "button2": "Lataa esite PDF",
+    "badges": ["Valmistettu Suomessa", "CE-merkitty", "Business Finland -tuettu"]
+  },
+  "contact": {
+    "headline": "Ota yhteyttä",
+    "name": "Nimi",
+    "phone": "Puhelinnumero",
+    "email": "Sähköposti",
+    "location": "Paikkakunta",
+    "dryerBrand": "Kuivurin merkki",
+    "message": "Viesti",
+    "submit": "Lähetä",
+    "success": "Kiitos! Otamme yhteyttä 24h sisällä.",
+    "phoneNumber": "+358 45 125 9000"
+  },
+  "footer": {
+    "tagline": "Kuivurisi vartija — näet kaiken, missä ikinä olet.",
+    "company": "© 2026 MWW / SeeMoto Oy. Valmistettu Suomessa.",
+    "privacy": "Tietosuoja",
+    "terms": "Käyttöehdot",
+    "cookies": "Evästeet"
+  }
+}

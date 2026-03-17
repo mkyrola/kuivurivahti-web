@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue');
+  font-display: swap;
+}
+
+:root {
+  --orange: #F5641E;
+  --charcoal: #2D2F33;
+  --off-white: #F7F6F3;
+  --gray-500: #7A7670;
+  --grain-gold: #E8C547;
+  --harvest-amber: #C8831A;
+  --sky-night: #0D1B2A;
+  --sky-dusk: #2C4A6B;
+  --aurora: #3DBA7E;
+  --fire-red: #E63946;
+  --safe-green: #2DC653;
+  --background: #F7F6F3;
+  --foreground: #2D2F33;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-orange: var(--orange);
+  --color-charcoal: var(--charcoal);
+  --color-off-white: var(--off-white);
+  --color-gray-500: var(--gray-500);
+  --color-grain-gold: var(--grain-gold);
+  --color-harvest-amber: var(--harvest-amber);
+  --color-sky-night: var(--sky-night);
+  --color-sky-dusk: var(--sky-dusk);
+  --color-aurora: var(--aurora);
+  --color-fire-red: var(--fire-red);
+  --color-safe-green: var(--safe-green);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-mono: var(--font-bebas-neue);
+}
+
+@keyframes pulse-orange {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 100, 30, 0.7); }
+  50% { box-shadow: 0 0 0 12px rgba(245, 100, 30, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
