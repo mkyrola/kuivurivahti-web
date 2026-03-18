@@ -102,6 +102,45 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shooting-star {
+  0% { transform: translateX(0) translateY(0); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translateX(300px) translateY(300px); opacity: 0; }
+}
+
+@keyframes firefly {
+  0%, 100% { opacity: 0; transform: translate(0, 0); }
+  20% { opacity: 0.8; }
+  50% { opacity: 0.4; transform: translate(15px, -20px); }
+  80% { opacity: 0.7; }
+}
+
+@keyframes type-cursor {
+  0%, 100% { border-color: var(--orange); }
+  50% { border-color: transparent; }
+}
+
+@keyframes conic-spin {
+  0% { --conic-angle: 0deg; }
+  100% { --conic-angle: 360deg; }
+}
+
+@keyframes ember-float {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-40px) scale(0.6); opacity: 0.3; }
+  100% { transform: translateY(-80px) scale(0.2); opacity: 0; }
+}
+
 /* ─── Base Styles ─── */
 
 body {
@@ -246,6 +285,140 @@ body {
   background:
     radial-gradient(ellipse 50% 50% at 30% 20%, rgba(232, 197, 71, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse 60% 50% at 75% 80%, rgba(245, 100, 30, 0.06) 0%, transparent 70%);
+}
+
+.mesh-problem {
+  background:
+    radial-gradient(ellipse 40% 60% at 10% 40%, rgba(230, 57, 70, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 40% at 50% 90%, rgba(232, 197, 71, 0.06) 0%, transparent 60%);
+}
+
+.mesh-dawn {
+  background:
+    linear-gradient(to bottom, #04090f 0%, #0a1828 40%, #1a2a40 70%, rgba(245, 100, 30, 0.15) 100%),
+    radial-gradient(ellipse 80% 40% at 50% 100%, rgba(232, 197, 71, 0.12) 0%, transparent 70%);
+}
+
+.mesh-frost {
+  background:
+    radial-gradient(ellipse 50% 50% at 20% 20%, rgba(59, 130, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(10, 107, 92, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 60% at 50% 50%, rgba(245, 100, 30, 0.02) 0%, transparent 60%);
+}
+
+/* ─── 3D Card Tilt ─── */
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+.tilt-card-inner {
+  transform: translateZ(40px);
+}
+
+/* ─── Magnetic Button ─── */
+
+.magnetic-btn {
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ─── Custom Cursor ─── */
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: difference;
+  transition: width 0.2s, height 0.2s, margin 0.2s;
+}
+
+.custom-cursor.expanded {
+  width: 40px;
+  height: 40px;
+  margin: -16px 0 0 -16px;
+  background: rgba(245, 100, 30, 0.15);
+  border: 1px solid rgba(245, 100, 30, 0.4);
+}
+
+.custom-cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 100, 30, 0.2);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.08s ease-out;
+  mix-blend-mode: difference;
+}
+
+/* ─── Breathing Pulse for CTA ─── */
+
+.breathe-pulse {
+  animation: breathe 2.5s ease-in-out infinite;
+}
+
+/* ─── Shimmer Badge ─── */
+
+.shimmer-badge {
+  background: linear-gradient(90deg, var(--orange), var(--grain-gold), var(--orange));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Conic Border for Recommended Card ─── */
+
+@property --conic-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.conic-border {
+  position: relative;
+  border-radius: 1rem;
+}
+.conic-border::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--conic-angle), var(--orange), var(--grain-gold), var(--aurora-teal), var(--sensor-blue), var(--orange));
+  z-index: -1;
+  animation: conic-spin 4s linear infinite;
+}
+
+/* ─── Radar Sweep for Live Widget ─── */
+
+.radar-sweep {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.radar-sweep::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(245, 100, 30, 0.03) 30deg, transparent 60deg);
+  transform-origin: 0 0;
+  animation: radar-sweep 8s linear infinite;
 }
 
 /* ─── Responsive Reduced Motion ─── */

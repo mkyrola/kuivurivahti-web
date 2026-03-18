@@ -31,57 +31,57 @@ export function PricingSection() {
   const fleetFeatures = t.raw('fleet.features') as string[];
 
   return (
-    <section ref={containerRef} className="relative bg-parchment py-28 px-6 overflow-hidden">
-      <div className="absolute inset-0 mesh-warm pointer-events-none" />
+    <section ref={containerRef} className="relative bg-night-deep py-32 px-6 overflow-hidden">
+      <div className="absolute inset-0 mesh-dark pointer-events-none" />
 
       <div className="relative mx-auto max-w-6xl">
-        <div className="pricing-head mb-14 text-center">
+        <div className="pricing-head mb-16 text-center">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-orange/60 data-mono">Pricing</p>
-          <h2 className="font-[var(--font-space-grotesk)] text-3xl font-bold text-charcoal md:text-4xl lg:text-5xl tracking-tight">
+          <h2 className="font-[var(--font-space-grotesk)] text-[clamp(2rem,5vw,3.5rem)] font-bold text-white tracking-tight">
             {t('headline')}
           </h2>
         </div>
 
-        <div className="mb-14 grid gap-6 md:grid-cols-3 items-start">
+        <div className="mb-16 grid gap-6 md:grid-cols-3 items-start">
           {/* Starter */}
-          <div className="pricing-card rounded-2xl p-[1px] bg-gradient-to-br from-charcoal/10 to-transparent hover-lift">
-            <div className="h-full rounded-2xl bg-white p-8">
+          <div className="pricing-card rounded-2xl p-[1px] bg-gradient-to-br from-white/10 to-transparent hover-lift">
+            <div className="h-full rounded-2xl glass-card p-8">
               <div className="mb-6">
-                <p className="data-mono text-[10px] font-bold uppercase tracking-widest text-gray-500">{t('starter.name')}</p>
-                <p className="mt-3 data-mono text-5xl font-bold text-charcoal">{t('starter.price')}</p>
-                <p className="mt-1 text-sm text-gray-400">{t('starter.period')}</p>
+                <p className="data-mono text-[10px] font-bold uppercase tracking-widest text-white/40">{t('starter.name')}</p>
+                <p className="mt-3 data-mono text-5xl font-bold text-white">{t('starter.price')}</p>
+                <p className="mt-1 text-sm text-white/35">{t('starter.period')}</p>
               </div>
-              <div className="mb-8 h-px bg-gradient-to-r from-transparent via-charcoal/10 to-transparent" />
+              <div className="mb-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
               <ul className="mb-8 space-y-3">
                 {starterFeatures.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm text-gray-600">
+                  <li key={f} className="flex items-start gap-2.5 text-sm text-white/60">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-safe-green" /> {f}
                   </li>
                 ))}
               </ul>
               <Link
                 href="/ota-yhteytta"
-                className="block w-full rounded-xl border-2 border-charcoal/80 px-6 py-3 text-center text-sm font-bold text-charcoal transition-all hover:bg-charcoal hover:text-white"
+                className="block w-full rounded-xl border border-white/20 px-6 py-3 text-center text-sm font-bold text-white/80 transition-all hover:bg-white/10 hover:border-white/40"
               >
                 {nav('demo')}
               </Link>
             </div>
           </div>
 
-          {/* Pro — hero card */}
-          <div className="pricing-card relative rounded-2xl p-[1.5px] bg-gradient-to-br from-orange via-grain-gold to-orange/40 hover-lift md:-mt-4">
-            <div className="relative h-full rounded-2xl bg-[#0d1520] p-8 overflow-hidden">
+          {/* Pro — hero card with conic border */}
+          <div className="pricing-card relative conic-border hover-lift md:-mt-6">
+            <div className="relative h-full rounded-2xl bg-[#0a1018] p-8 overflow-hidden">
               {/* Ambient glow */}
-              <div className="absolute -top-12 -right-12 h-40 w-40 rounded-full bg-orange/10 blur-3xl" />
-              <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-grain-gold/8 blur-3xl" />
+              <div className="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-orange/12 blur-3xl" />
+              <div className="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-grain-gold/8 blur-3xl" />
 
-              <span className="absolute -top-px left-1/2 -translate-x-1/2 rounded-b-lg bg-gradient-to-r from-orange to-grain-gold px-5 py-1.5 text-[10px] font-bold text-white uppercase tracking-widest flex items-center gap-1.5">
+              <span className="absolute -top-px left-1/2 -translate-x-1/2 rounded-b-lg bg-gradient-to-r from-orange to-grain-gold px-6 py-2 text-[10px] font-bold text-white uppercase tracking-widest flex items-center gap-1.5 shadow-lg shadow-orange/20">
                 <Sparkles className="h-3 w-3" /> {t('pro.badge')}
               </span>
 
-              <div className="relative mb-6 mt-4">
+              <div className="relative mb-6 mt-5">
                 <p className="data-mono text-[10px] font-bold uppercase tracking-widest text-orange/70">{t('pro.name')}</p>
-                <p className="mt-3 data-mono text-5xl font-bold text-white">{t('pro.price')}</p>
+                <p className="mt-3 data-mono text-6xl font-bold text-white">{t('pro.price')}</p>
               </div>
               <div className="mb-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
               <ul className="relative mb-8 space-y-3">
@@ -93,7 +93,7 @@ export function PricingSection() {
               </ul>
               <Link
                 href="/ota-yhteytta"
-                className="relative block w-full rounded-xl bg-gradient-to-r from-orange to-grain-gold/80 px-6 py-3.5 text-center text-sm font-bold text-white transition-all hover:brightness-110 hover-glow-orange"
+                className="breathe-pulse relative block w-full rounded-xl bg-gradient-to-r from-orange to-grain-gold/80 px-6 py-4 text-center text-sm font-bold text-white transition-all hover:brightness-110 hover-glow-orange shadow-lg shadow-orange/20"
               >
                 {nav('demo')} →
               </Link>
@@ -101,23 +101,23 @@ export function PricingSection() {
           </div>
 
           {/* Fleet */}
-          <div className="pricing-card rounded-2xl p-[1px] bg-gradient-to-br from-charcoal/10 to-transparent hover-lift">
-            <div className="h-full rounded-2xl bg-white p-8">
+          <div className="pricing-card rounded-2xl p-[1px] bg-gradient-to-br from-white/10 to-transparent hover-lift">
+            <div className="h-full rounded-2xl glass-card p-8">
               <div className="mb-6">
-                <p className="data-mono text-[10px] font-bold uppercase tracking-widest text-gray-500">{t('fleet.name')}</p>
-                <p className="mt-3 font-[var(--font-space-grotesk)] text-3xl font-bold text-charcoal">{t('fleet.price')}</p>
+                <p className="data-mono text-[10px] font-bold uppercase tracking-widest text-white/40">{t('fleet.name')}</p>
+                <p className="mt-3 font-[var(--font-space-grotesk)] text-3xl font-bold text-white">{t('fleet.price')}</p>
               </div>
-              <div className="mb-8 h-px bg-gradient-to-r from-transparent via-charcoal/10 to-transparent" />
+              <div className="mb-8 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
               <ul className="mb-8 space-y-3">
                 {fleetFeatures.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm text-gray-600">
+                  <li key={f} className="flex items-start gap-2.5 text-sm text-white/60">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-safe-green" /> {f}
                   </li>
                 ))}
               </ul>
               <Link
                 href="/ota-yhteytta"
-                className="block w-full rounded-xl border-2 border-charcoal/80 px-6 py-3 text-center text-sm font-bold text-charcoal transition-all hover:bg-charcoal hover:text-white"
+                className="block w-full rounded-xl border border-white/20 px-6 py-3 text-center text-sm font-bold text-white/80 transition-all hover:bg-white/10 hover:border-white/40"
               >
                 {nav('contact')}
               </Link>
@@ -126,11 +126,11 @@ export function PricingSection() {
         </div>
 
         {/* Notes */}
-        <div className="space-y-3 text-center text-sm max-w-xl mx-auto">
-          <div className="rounded-xl bg-gradient-to-r from-orange/10 via-grain-gold/10 to-orange/10 px-6 py-3">
+        <div className="space-y-4 text-center text-sm max-w-xl mx-auto">
+          <div className="rounded-xl bg-gradient-to-r from-orange/10 via-grain-gold/8 to-orange/10 px-6 py-3.5 border border-orange/10">
             <p className="text-orange font-medium">💡 {t('subsidy')}</p>
           </div>
-          <p className="font-[var(--font-space-grotesk)] font-bold text-charcoal">{t('guarantee')}</p>
+          <p className="font-[var(--font-space-grotesk)] font-bold text-white/80">{t('guarantee')}</p>
         </div>
       </div>
     </section>

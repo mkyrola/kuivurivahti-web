@@ -61,57 +61,70 @@ export function CompetitorTable() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative bg-night-deep py-28 px-6 overflow-hidden">
-      <div className="absolute inset-0 mesh-dark pointer-events-none" />
+    <section ref={containerRef} className="relative bg-frost-white py-32 px-6 overflow-hidden">
+      <div className="absolute inset-0 mesh-frost pointer-events-none" />
 
       <div className="relative mx-auto max-w-5xl">
-        <div className="comp-head mb-12 text-center">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-orange/60 data-mono">Comparison</p>
-          <h2 className="font-[var(--font-space-grotesk)] text-3xl font-bold text-white md:text-4xl lg:text-5xl tracking-tight">
+        <div className="comp-head mb-14 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-orange/70 data-mono">Comparison</p>
+          <h2 className="font-[var(--font-space-grotesk)] text-[clamp(2rem,5vw,3.5rem)] font-bold text-charcoal tracking-tight">
             {t('headline')}
           </h2>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl glass-card">
-          <table className="w-full text-sm">
+        {/* Mobile scroll hint */}
+        <div className="mb-3 flex items-center justify-end gap-2 sm:hidden">
+          <span className="text-[10px] text-charcoal/30 data-mono">Vieritä →</span>
+          <div className="h-px w-8 bg-gradient-to-r from-orange/30 to-transparent" />
+        </div>
+
+        <div className="overflow-x-auto rounded-2xl bg-white shadow-depth-lg border border-charcoal/5">
+          <table className="w-full text-sm min-w-[600px]">
             <thead>
-              <tr className="border-b border-white/5">
-                <th className="px-6 py-4 text-left text-[10px] font-bold uppercase tracking-widest text-white/30 data-mono">{t('feature')}</th>
-                <th className="px-4 py-4 text-center bg-orange/5 border-x border-orange/10">
-                  <div className="font-[var(--font-space-grotesk)] text-sm font-bold text-white">SEEMOTO</div>
+              <tr className="border-b border-charcoal/8">
+                <th className="px-6 py-5 text-left text-[10px] font-bold uppercase tracking-widest text-charcoal/40 data-mono">{t('feature')}</th>
+                <th className="px-4 py-5 text-center bg-gradient-to-b from-orange/8 to-orange/3 border-x border-orange/15 relative">
+                  <div className="font-[var(--font-space-grotesk)] text-sm font-bold text-charcoal">SEEMOTO</div>
                   <div className="data-mono text-[10px] font-bold text-orange tracking-wider">KUIVURIVAHTI</div>
+                  {/* Top glow bar */}
+                  <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange via-grain-gold to-orange rounded-t" />
                 </th>
-                <th className="px-4 py-4 text-center text-[10px] font-bold uppercase tracking-widest text-white/25 data-mono">Wiljami</th>
-                <th className="px-4 py-4 text-center text-[10px] font-bold uppercase tracking-widest text-white/25 data-mono">Cauco CL</th>
-                <th className="px-4 py-4 text-center text-[10px] font-bold uppercase tracking-widest text-white/25 data-mono hidden sm:table-cell">Antti Optima</th>
+                <th className="px-4 py-5 text-center text-[10px] font-bold uppercase tracking-widest text-charcoal/25 data-mono">Wiljami</th>
+                <th className="px-4 py-5 text-center text-[10px] font-bold uppercase tracking-widest text-charcoal/25 data-mono">Cauco CL</th>
+                <th className="px-4 py-5 text-center text-[10px] font-bold uppercase tracking-widest text-charcoal/25 data-mono hidden sm:table-cell">Antti Optima</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-charcoal/5">
               {ROWS.map(({ key, seemoto, wiljami, cauco, antti }) => (
-                <tr key={key} className="comp-row hover:bg-white/[0.02] transition-colors">
-                  <td className="px-6 py-3.5 font-medium text-white/70 text-sm">{t(key)}</td>
-                  <td className="px-4 py-3.5 text-center bg-orange/5 border-x border-orange/10">
+                <tr key={key} className="comp-row hover:bg-orange/[0.02] transition-colors">
+                  <td className="px-6 py-4 font-medium text-charcoal/70 text-sm">{t(key)}</td>
+                  <td className="px-4 py-4 text-center bg-orange/[0.03] border-x border-orange/10">
                     <Cell value={seemoto} t={t} isSEEMOTO />
                   </td>
-                  <td className="px-4 py-3.5 text-center"><Cell value={wiljami} t={t} /></td>
-                  <td className="px-4 py-3.5 text-center"><Cell value={cauco} t={t} /></td>
-                  <td className="px-4 py-3.5 text-center hidden sm:table-cell"><Cell value={antti} t={t} /></td>
+                  <td className="px-4 py-4 text-center opacity-60"><Cell value={wiljami} t={t} /></td>
+                  <td className="px-4 py-4 text-center opacity-60"><Cell value={cauco} t={t} /></td>
+                  <td className="px-4 py-4 text-center opacity-60 hidden sm:table-cell"><Cell value={antti} t={t} /></td>
                 </tr>
               ))}
               {/* Price row */}
-              <tr className="comp-row border-t border-white/10">
-                <td className="px-6 py-4 font-bold text-white/80">{t('price')}</td>
-                <td className="px-4 py-4 text-center bg-orange/5 border-x border-orange/10">
-                  <span className="data-mono text-2xl font-bold text-orange">{PRICES.seemoto}</span>
+              <tr className="comp-row border-t-2 border-charcoal/10">
+                <td className="px-6 py-5 font-bold text-charcoal">{t('price')}</td>
+                <td className="px-4 py-5 text-center bg-orange/[0.05] border-x border-orange/15 relative">
+                  <span className="data-mono text-3xl font-bold text-orange">{PRICES.seemoto}</span>
+                  <div className="mt-1">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-safe-green/10 px-2.5 py-0.5 text-[9px] font-bold text-safe-green data-mono uppercase tracking-wider">
+                      <Check className="h-2.5 w-2.5" /> Best Value
+                    </span>
+                  </div>
                 </td>
-                <td className="px-4 py-4 text-center data-mono text-white/30">{PRICES.wiljami}</td>
-                <td className="px-4 py-4 text-center data-mono text-white/30">{PRICES.cauco}</td>
-                <td className="px-4 py-4 text-center data-mono text-white/30 hidden sm:table-cell">{PRICES.antti}</td>
+                <td className="px-4 py-5 text-center data-mono text-charcoal/25 text-lg">{PRICES.wiljami}</td>
+                <td className="px-4 py-5 text-center data-mono text-charcoal/25 text-lg">{PRICES.cauco}</td>
+                <td className="px-4 py-5 text-center data-mono text-charcoal/25 text-lg hidden sm:table-cell">{PRICES.antti}</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p className="mt-4 text-center text-xs text-white/20 data-mono">* Hintatiedot verkkosivuilta, maaliskuu 2026</p>
+        <p className="mt-5 text-center text-xs text-charcoal/25 data-mono">* Hintatiedot verkkosivuilta, maaliskuu 2026</p>
       </div>
     </section>
   );

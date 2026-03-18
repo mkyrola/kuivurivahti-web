@@ -130,6 +130,10 @@
       { "year": "2027", "title": "Energioptimering", "text": "Torkparameteroptimering baserat på elpris och väderprognos" }
     ]
   },
+  "sensorReveal": {
+    "headline": "Byggd för att hålla",
+    "subtitle": "4G-anslutning, dubbla sensorer, AI — allt i en IP67-klassad enhet."
+  },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
     "subHeadline": "Kontakta oss idag.",

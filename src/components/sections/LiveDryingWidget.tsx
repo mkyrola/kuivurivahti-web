@@ -37,9 +37,11 @@ export function LiveDryingWidget() {
   const bestWindows = windows.filter((w) => w.rating === 'best' || w.rating === 'good').slice(0, 8);
 
   return (
-    <section className="relative bg-[#070e17] py-28 px-6 overflow-hidden">
+    <section className="relative bg-[#050c14] py-32 px-6 overflow-hidden">
       {/* Ambient gradient mesh */}
       <div className="absolute inset-0 mesh-dark pointer-events-none" />
+      {/* Radar sweep overlay */}
+      <div className="radar-sweep" />
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{

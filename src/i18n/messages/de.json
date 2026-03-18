@@ -131,6 +131,10 @@
       { "year": "2027", "title": "Energieoptimierung", "text": "Automatische Trocknungsparameteranpassung basierend auf Strompreis" }
     ]
   },
+  "sensorReveal": {
+    "headline": "Gebaut um zu bestehen",
+    "subtitle": "4G-Konnektivität, Dual-Sensoren, KI — alles in einem IP67-zertifizierten Gerät."
+  },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
     "subHeadline": "Bestellen Sie Ihre Demo heute.",

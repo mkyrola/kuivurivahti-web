@@ -130,6 +130,10 @@
       { "year": "2027", "title": "Energiaoptimointi", "text": "Kuivausparametrien optimointi sähkönhinnan ja sääennusteen mukaan" }
     ]
   },
+  "sensorReveal": {
+    "headline": "Suunniteltu kestämään",
+    "subtitle": "4G-yhteys, kaksi anturia, tekoäly — kaikki yhdessä IP67-suojatussa laitteessa."
+  },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
     "subHeadline": "Ota yhteyttä tänään.",

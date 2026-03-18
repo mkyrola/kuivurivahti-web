@@ -9,6 +9,8 @@ import { Navigation } from '@/components/layout/Navigation';
 import { Footer } from '@/components/layout/Footer';
 import { LenisProvider } from '@/components/layout/LenisProvider';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
+import { CustomCursor } from '@/components/ui/CustomCursor';
+import { Preloader } from '@/components/ui/Preloader';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -87,6 +89,8 @@ export default async function LocaleLayout({
       <body className="noise-overlay bg-off-white text-charcoal antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LenisProvider>
+            <Preloader />
+            <CustomCursor />
             <ScrollProgress />
             <Navigation />
             <main>{children}</main>

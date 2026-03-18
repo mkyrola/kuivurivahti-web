@@ -10,6 +10,7 @@ import { PricingSection } from '@/components/sections/PricingSection';
 import { AIRoadmap } from '@/components/sections/AIRoadmap';
 import { CTASection } from '@/components/sections/CTASection';
 import { AboutSection } from '@/components/sections/AboutSection';
+import { SensorReveal } from '@/components/sections/SensorReveal';
 
 export default async function HomePage({
   params,
@@ -25,6 +26,7 @@ export default async function HomePage({
       <div id="tuote">
         <FeaturesGrid />
         <SensorSpecs />
+        <SensorReveal />
       </div>
       <div id="hinnat">
         <CompetitorTable />

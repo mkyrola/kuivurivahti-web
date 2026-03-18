@@ -130,6 +130,10 @@
       { "year": "2027", "title": "Energy optimization", "text": "Drying parameter optimization based on electricity price and weather forecast" }
     ]
   },
+  "sensorReveal": {
+    "headline": "Built to endure",
+    "subtitle": "4G connectivity, dual sensors, AI — all in one IP67-rated device."
+  },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
     "subHeadline": "Contact us today.",

@@ -68,22 +68,22 @@ export function DryingCurveStory() {
   const chartData = SESSION_DATA.slice(0, Math.max(visibleCount, 4));
 
   return (
-    <section ref={containerRef} className="relative bg-parchment py-28 px-6 overflow-hidden">
-      <div className="absolute inset-0 mesh-warm pointer-events-none" />
+    <section ref={containerRef} className="relative bg-frost-white py-32 px-6 overflow-hidden">
+      <div className="absolute inset-0 mesh-frost pointer-events-none" />
 
       <div className="relative mx-auto max-w-6xl">
-        <div className="curve-head mb-12 text-center">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-orange/60 data-mono">Real Sensor Data</p>
-          <h2 className="font-[var(--font-space-grotesk)] text-3xl font-bold text-charcoal md:text-4xl lg:text-5xl tracking-tight">
+        <div className="curve-head mb-14 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-orange/70 data-mono">Real Sensor Data</p>
+          <h2 className="font-[var(--font-space-grotesk)] text-[clamp(2rem,5vw,3.5rem)] font-bold text-charcoal tracking-tight">
             {t('title')}
           </h2>
-          <p className="mt-3 text-sm text-gray-500">
-            Todelliset anturilukemat — Elo–Syyskuu 2025
+          <p className="mt-3 text-sm text-charcoal/40 data-mono">
+            Todelliset anturilukemat — Huju Farm, Sastamala — Elo–Syyskuu 2025
           </p>
         </div>
 
-        {/* Chart — dark card */}
-        <div className="curve-chart rounded-2xl bg-[#0d1520] p-6 md:p-8 shadow-depth-lg">
+        {/* Chart — dark card with enhanced depth */}
+        <div className="curve-chart rounded-2xl bg-[#0d1520] p-6 md:p-8 shadow-depth-lg border border-white/5">
           <div className="mb-5 flex flex-wrap items-center gap-6 text-xs data-mono">
             <span className="flex items-center gap-2 text-white/50">
               <span className="inline-block h-0.5 w-6 rounded-full bg-orange" />
@@ -115,10 +115,10 @@ export function DryingCurveStory() {
           </ResponsiveContainer>
         </div>
 
-        {/* Testimonial — editorial pull quote */}
-        <div className="curve-quote mt-12 relative rounded-2xl bg-white p-8 md:p-10 shadow-depth">
+        {/* Testimonial — editorial pull quote with warm accent */}
+        <div className="curve-quote mt-14 relative rounded-2xl bg-white p-8 md:p-10 shadow-depth-lg border-l-4 border-l-orange">
           {/* Giant quotation mark */}
-          <span className="absolute -top-4 left-6 font-[var(--font-bebas-neue)] text-[120px] leading-none text-orange/10 select-none">&ldquo;</span>
+          <span className="absolute -top-4 left-8 font-[var(--font-bebas-neue)] text-[140px] leading-none text-orange/8 select-none">&ldquo;</span>
 
           <div className="relative flex flex-col gap-6 md:flex-row md:items-start">
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange/20 to-grain-gold/10 text-2xl">

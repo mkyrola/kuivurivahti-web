@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -20,9 +20,28 @@ const STARS = Array.from({ length: 90 }, (_, i) => ({
   twinkle: i % 5 === 0,
 }));
 
+// Deterministic firefly positions near barn area
+const FIREFLIES = Array.from({ length: 16 }, (_, i) => ({
+  left: 35 + (i * 17.3) % 30,
+  bottom: 20 + (i * 11.7) % 20,
+  delay: (i * 1.3) % 6,
+  duration: 3 + (i % 4) * 1.5,
+  size: 2 + (i % 3),
+}));
+
 export function HeroNightWatch() {
   const t = useTranslations('hero');
   const containerRef = useRef<HTMLDivElement>(null);
+  const starsLayerRef = useRef<HTMLDivElement>(null);
+
+  // Cursor parallax on stars
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    const layer = starsLayerRef.current;
+    if (!layer) return;
+    const x = (e.clientX / window.innerWidth - 0.5) * -12;
+    const y = (e.clientY / window.innerHeight - 0.5) * -8;
+    layer.style.transform = `translate(${x}px, ${y}px)`;
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -86,6 +105,7 @@ export function HeroNightWatch() {
       ref={containerRef}
       className="relative h-screen w-full overflow-hidden"
       style={{ background: '#06101a' }}
+      onMouseMove={handleMouseMove}
     >
       {/* Sky gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#04090f] via-[#0a1828] via-60% to-[#0e1e0e]" />
@@ -98,8 +118,18 @@ export function HeroNightWatch() {
         }}
       />
 
-      {/* Stars layer */}
-      <div id="stars-layer" className="absolute inset-0 pointer-events-none">
+      {/* Shooting star — occasional SVG animation */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[8%] left-[15%] w-[2px] h-[2px] bg-white rounded-full" style={{ animation: 'shooting-star 2.5s ease-in 0s infinite', animationDelay: '3s' }}>
+          <div className="absolute top-0 left-0 w-[40px] h-[1px] bg-gradient-to-l from-white/80 to-transparent -translate-x-full" />
+        </div>
+        <div className="absolute top-[12%] left-[65%] w-[2px] h-[2px] bg-white rounded-full" style={{ animation: 'shooting-star 2s ease-in 0s infinite', animationDelay: '11s' }}>
+          <div className="absolute top-0 left-0 w-[30px] h-[1px] bg-gradient-to-l from-white/60 to-transparent -translate-x-full" />
+        </div>
+      </div>
+
+      {/* Stars layer — with cursor parallax */}
+      <div id="stars-layer" ref={starsLayerRef} className="absolute inset-0 pointer-events-none transition-transform duration-200 ease-out">
         <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
           {STARS.map((s, i) => (
             <circle
@@ -119,6 +149,25 @@ export function HeroNightWatch() {
           <circle cx="10%" cy="18%" r="1.5" fill="#cce0ff" opacity="0.70" />
           <circle cx="91%" cy="22%" r="1.5" fill="#cce0ff" opacity="0.65" />
         </svg>
+      </div>
+
+      {/* Firefly particles near barn */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-[5]">
+        {FIREFLIES.map((f, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              left: `${f.left}%`,
+              bottom: `${f.bottom}%`,
+              width: f.size,
+              height: f.size,
+              background: i % 3 === 0 ? '#E8C547' : '#F5641E',
+              animation: `firefly ${f.duration}s ease-in-out ${f.delay}s infinite`,
+              filter: 'blur(0.5px)',
+            }}
+          />
+        ))}
       </div>
 
       {/* Farm silhouette layer */}
@@ -222,6 +271,12 @@ export function HeroNightWatch() {
 
         {/* Window light spill on ground */}
         <div className="absolute bottom-[14%] left-[calc(50%-30px)] h-20 w-28 rounded-full bg-amber-400/15 blur-2xl" />
+
+        {/* Fog wisps at ground level */}
+        <div className="absolute bottom-[8%] left-0 right-0 h-16 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/8 to-transparent" style={{ animation: 'fog-drift 30s ease-in-out infinite' }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" style={{ animation: 'fog-drift 25s ease-in-out infinite reverse', animationDelay: '-8s' }} />
+        </div>
       </div>
 
       {/* ── CONTENT LAYERS ── */}
@@ -251,9 +306,11 @@ export function HeroNightWatch() {
             <AlertBadge state="warning" label={t('anomaly')} />
           </div>
 
-          {/* Phase 3 — Phone notification mockup */}
+          {/* Phase 3 — Phone notification mockup — enhanced with glow */}
           <div id="phone-mockup" className="absolute inset-0 flex items-center justify-center opacity-0">
-            <div className="w-80 rounded-3xl border border-white/15 bg-[#080f18]/95 p-6 shadow-2xl backdrop-blur-xl">
+            <div className="relative w-80 rounded-3xl border border-white/15 bg-[#080f18]/95 p-6 shadow-2xl backdrop-blur-xl">
+              {/* Phone screen glow */}
+              <div className="absolute -inset-6 rounded-[2.5rem] bg-orange/5 blur-2xl pointer-events-none" />
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-orange" />

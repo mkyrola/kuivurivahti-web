@@ -131,6 +131,10 @@
       { "year": "2027", "title": "Energiaoptimeerimine", "text": "Automaatne kuivatusparameetrite kohandamine elektrihinna järgi" }
     ]
   },
+  "sensorReveal": {
+    "headline": "Ehitatud kestma",
+    "subtitle": "4G-ühendus, kaks andurit, tehisintellekt — kõik ühes IP67-klassiga seadmes."
+  },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
     "subHeadline": "Telli oma demo täna.",
