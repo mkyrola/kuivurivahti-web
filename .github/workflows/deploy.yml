@@ -26,17 +26,13 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Verify install
-        run: ls node_modules/.bin/opennextjs-cloudflare && node --version && npm --version
-
       - name: Build for Cloudflare Workers
         run: node_modules/.bin/opennextjs-cloudflare build
         env:
           NODE_ENV: production
 
       - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 9a99f9b865ee762e25e8531927a08840
-          command: deploy
+        run: node_modules/.bin/wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 9a99f9b865ee762e25e8531927a08840
