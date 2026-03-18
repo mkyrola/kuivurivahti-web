@@ -25,7 +25,7 @@ function formatHour(iso: string) {
 export function LiveDryingWidget() {
   const t = useTranslations('weather');
   const [selectedCity, setSelectedCity] = useState(FINNISH_CITIES[0]);
-  const [grain, setGrain] = useState<GrainType>('ohra');
+  const grain: GrainType = 'ohra';
 
   const { data, isLoading } = useSWR<{ windows: DryingWindow[] }>(
     `/api/weather?lat=${selectedCity.lat}&lon=${selectedCity.lon}&grain=${grain}`,
@@ -79,23 +79,6 @@ export function LiveDryingWidget() {
             </select>
           </div>
 
-          {/* Grain pills */}
-          <div className="flex items-center gap-1 rounded-lg bg-white/5 p-1">
-            {(Object.keys(t.raw('grains')) as GrainType[]).map((g) => (
-              <button
-                key={g}
-                onClick={() => setGrain(g)}
-                className={cn(
-                  'rounded-md px-3 py-1 text-xs font-medium transition-all duration-200',
-                  grain === g
-                    ? 'bg-orange text-white shadow-sm'
-                    : 'text-white/50 hover:text-white/80'
-                )}
-              >
-                {t(`grains.${g}`)}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Windows list */}

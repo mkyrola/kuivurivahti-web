@@ -268,7 +268,7 @@ export function HeroNightWatch() {
                   🔴 Hälytys
                 </div>
                 <div className="rounded-xl border border-safe-green/30 bg-safe-green/10 py-2.5 text-center text-xs font-semibold text-safe-green">
-                  ✓ Sammuta
+                  ✓ Jäähdytys
                 </div>
               </div>
             </div>

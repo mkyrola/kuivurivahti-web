@@ -11,24 +11,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CARD_CONFIG = [
   {
+    Icon: Moon,
+    accent: '#3B82F6',
+    glow: 'rgba(59, 130, 246, 0.12)',
+    stat: '02:47',
+    from: { x: -80, y: 0, rotate: -3 },
+  },
+  {
     Icon: Flame,
     accent: '#E63946',
     glow: 'rgba(230, 57, 70, 0.15)',
-    stat: '€15 000+',
-    from: { x: -80, y: 0, rotate: -3 },
+    stat: '60–80',
+    from: { x: 0, y: 60, rotate: 0 },
   },
   {
     Icon: TrendingDown,
     accent: '#E8C547',
     glow: 'rgba(232, 197, 71, 0.12)',
-    stat: '12–18%',
-    from: { x: 0, y: 60, rotate: 0 },
-  },
-  {
-    Icon: Moon,
-    accent: '#3B82F6',
-    glow: 'rgba(59, 130, 246, 0.12)',
-    stat: '02:47',
+    stat: '€300–500',
     from: { x: 80, y: 0, rotate: 3 },
   },
 ] as const;

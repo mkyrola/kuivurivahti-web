@@ -10,7 +10,7 @@
     "customers": "Customers",
     "support": "Support",
     "contact": "Contact",
-    "demo": "Order demo",
+    "demo": "Contact us",
     "language": "Language"
   },
   "hero": {
@@ -19,13 +19,13 @@
     "youSleep": "You are sleeping.",
     "tagline": "The only dryer guardian that never sleeps.",
     "subTagline": "AI-powered grain dryer monitoring. Fire warning 10–15 min in advance. Install in under 30 minutes.",
-    "cta1": "Order demo",
+    "cta1": "Contact us",
     "cta2": "See how it works",
     "exhaust": "Exhaust air",
     "riseRate": "Rise rate",
     "anomaly": "ANOMALY",
     "checkDryer": "Check dryer — temperature rising rapidly",
-    "closedRemotely": "Shut down remotely. All clear.",
+    "closedRemotely": "Switched to cooling mode remotely. All clear.",
     "backToSleep": "Back to sleep. 04:15 AM.",
     "buttonPresses": "3 button presses later...",
     "stat1": "13,000",
@@ -36,7 +36,7 @@
     "stat3Label": "average damage"
   },
   "problem": {
-    "headline": "3,000 dryers without remote monitoring. Every autumn.",
+    "headline": "Thousands of dryers without remote monitoring. Every autumn.",
     "card1Title": "Sleep deprivation",
     "card1Text": "During harvest season, farmers wake up at 2–4 AM to check the dryer. 4–6 weeks every autumn. Over 200 hours of lost sleep.",
     "card2Title": "Fire risk is real",
@@ -45,14 +45,14 @@
     "card3Text": "One percentage point too dry = €300–500 loss per batch. Farmers over-dry for safety — wasting energy and grain."
   },
   "features": {
-    "headline": "One device. Three sensors. AI.",
-    "temp": { "title": "Temperature + humidity", "text": "The only device that measures both. Temperature tells what's happening — humidity tells when the grain is dry." },
-    "ai": { "title": "AI-powered fire warning", "text": "Detects abnormal temperature rise rates 10–15 min before critical situations." },
+    "headline": "One device. Two sensors. Smart monitoring.",
+    "temp": { "title": "Temperature + humidity", "text": "Exhaust air temperature is the primary drying indicator. Humidity sensor provides additional data for future AI model training." },
+    "ai": { "title": "Smart fire warning", "text": "Detects abnormal temperature rise rates — distinguishes normal drying cycles from dangerous overheating patterns." },
     "alert": { "title": "Alert three ways", "text": "Push notification, SMS and voice call. Wakes you even when your phone is on silent." },
     "weather": { "title": "Weather-aware drying planning", "text": "72h drying window forecast. Frost forecast. Lightning storm alert. NordPool electricity price." },
-    "fourG": { "title": "4G + 8h battery", "text": "Works without home network. Works during power outages. Covers all of Finland." },
-    "install": { "title": "Install in under 30 min", "text": "No electrician needed. Attach sensor to exhaust duct — done." },
-    "ce": { "title": "CE + Made in Finland", "text": "Industrial standards. -40°C frost resistance." },
+    "fourG": { "title": "4G + 8h battery", "text": "Works without home network. Device stays operational during power outages — sends alerts as soon as 4G connectivity is available." },
+    "install": { "title": "Install in under 30 min", "text": "1) Attach sensor to exhaust duct. 2) Insert SIM card. 3) Download app & pair device. 4) Set alert thresholds. No electrician needed." },
+    "ce": { "title": "CE + Made in Finland", "text": "Industrial standards. Operating temperature -40°C to +70°C (per component specifications)." },
     "brand": { "title": "Works with all brands", "text": "Antti, Mepu, Opico — brand doesn't matter. If it has an exhaust duct, SEEMOTO KUIVURIVAHTI fits." }
   },
   "weather": {
@@ -68,17 +68,17 @@
     "poweredBy": "Data: Finnish Meteorological Institute + Open-Meteo"
   },
   "sensor": {
-    "headline": "Industrial-grade sensor technology",
+    "headline": "Designed in Finland, together with farmers",
     "pt100": "PT100 temperature sensor (±0.1°C)",
     "sht41": "SHT41 humidity sensor (±1.5%RH)",
     "nrf": "nRF9161 4G LTE-M",
-    "battery": "8h battery — works during power outages",
+    "battery": "8h battery — device stays operational during power cuts",
     "ip67": "IP67 — rain and dust resistant",
     "ce": "CE certified"
   },
   "testimonial": {
-    "title": "Veijo Huju's dryer. August 2025. 6,478 measurements.",
-    "quote": "For the first time in 15 years, I slept through the night during harvest season. When the alert came at 3:47 AM, I shut down the dryer from my phone. Didn't need to get out of bed.",
+    "title": "Real customer: Veijo Huju's dryer. August 2025. 6,478 measurements.",
+    "quote": "For the first time in 15 years, I slept through the night during harvest season. When the alert came at 3:47 AM, I switched the dryer to cooling mode from my phone. Didn't need to get out of bed.",
     "name": "Veijo Huju",
     "location": "Sastamala, Pirkanmaa"
   },
@@ -119,24 +119,23 @@
       "period": "",
       "features": ["5+ dryers", "Fleet management dashboard", "API integration", "4h SLA response time", "Dedicated account manager"]
     },
-    "subsidy": "Finnish Food Authority investment support: up to 40% of hardware cost. We help with the application.",
-    "leasing": "Lease €49/mo — includes device, Pro subscription and installation support.",
+    "subsidy": "KUIVURIVAHTI may qualify for Finnish Food Authority agricultural digitalization support. Contact us for details.",
     "guarantee": "90-day money-back guarantee. Zero risk."
   },
   "roadmap": {
-    "headline": "AI improves every harvest season",
+    "headline": "The more dryers we monitor, the smarter the system gets.",
     "items": [
-      { "year": "2025", "title": "Fire warning", "text": "Temperature anomaly detection 10–15 min in advance" },
-      { "year": "2026", "title": "Dryness prediction", "text": "Predicting exact drying time from exhaust humidity" },
-      { "year": "2027", "title": "Energy optimization", "text": "Automatic drying parameter adjustment based on electricity price" }
+      { "year": "2025", "title": "Fire warning", "text": "Temperature anomaly detection and abnormal rise trend identification" },
+      { "year": "2026", "title": "Dryness prediction", "text": "Predicting drying time based on exhaust air data" },
+      { "year": "2027", "title": "Energy optimization", "text": "Drying parameter optimization based on electricity price and weather forecast" }
     ]
   },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
-    "subHeadline": "Order your demo today.",
-    "delivery": "Delivery in 5 business days.",
+    "subHeadline": "Contact us today.",
+    "delivery": "Delivery time agreed upon order.",
     "guarantee": "90-day money-back guarantee.",
-    "button1": "Order demo",
+    "button1": "Contact us",
     "button2": "Download brochure PDF",
     "badges": ["Made in Finland", "CE certified", "Business Finland supported"]
   },
@@ -151,6 +150,16 @@
     "submit": "Send",
     "success": "Thank you! We'll contact you within 24 hours.",
     "phoneNumber": "+358 45 125 9000"
+  },
+  "about": {
+    "headline": "Who we are",
+    "text": "SEEMOTO is a Finnish technology company developing AI-powered monitoring solutions for agriculture. KUIVURIVAHTI was born in collaboration with farmers — from real needs, for real problems.",
+    "founded": "Founded",
+    "foundedValue": "2024, Finland",
+    "backed": "Backed by",
+    "backedValue": "Business Finland",
+    "team": "Team",
+    "teamValue": "Engineers + farmers"
   },
   "footer": {
     "tagline": "Your dryer guardian — see everything, wherever you are.",

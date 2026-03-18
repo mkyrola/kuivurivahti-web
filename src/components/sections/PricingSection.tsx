@@ -130,7 +130,6 @@ export function PricingSection() {
           <div className="rounded-xl bg-gradient-to-r from-orange/10 via-grain-gold/10 to-orange/10 px-6 py-3">
             <p className="text-orange font-medium">💡 {t('subsidy')}</p>
           </div>
-          <p className="text-gray-500">{t('leasing')}</p>
           <p className="font-[var(--font-space-grotesk)] font-bold text-charcoal">{t('guarantee')}</p>
         </div>
       </div>

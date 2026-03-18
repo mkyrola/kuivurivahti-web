@@ -9,6 +9,7 @@ import { CompetitorTable } from '@/components/sections/CompetitorTable';
 import { PricingSection } from '@/components/sections/PricingSection';
 import { AIRoadmap } from '@/components/sections/AIRoadmap';
 import { CTASection } from '@/components/sections/CTASection';
+import { AboutSection } from '@/components/sections/AboutSection';
 
 export default async function HomePage({
   params,
@@ -25,15 +26,16 @@ export default async function HomePage({
         <FeaturesGrid />
         <SensorSpecs />
       </div>
-      <div id="miten-toimii">
-        <LiveDryingWidget />
-        <DryingCurveStory />
-      </div>
       <div id="hinnat">
         <CompetitorTable />
         <PricingSection />
       </div>
+      <div id="miten-toimii">
+        <DryingCurveStory />
+        <LiveDryingWidget />
+      </div>
       <AIRoadmap />
+      <AboutSection />
       <CTASection />
     </>
   );

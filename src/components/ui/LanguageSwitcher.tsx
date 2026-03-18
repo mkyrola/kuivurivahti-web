@@ -8,8 +8,6 @@ const LOCALES = [
   { code: 'fi', flag: '🇫🇮', name: 'Suomi' },
   { code: 'en', flag: '🇬🇧', name: 'English' },
   { code: 'sv', flag: '🇸🇪', name: 'Svenska' },
-  { code: 'et', flag: '🇪🇪', name: 'Eesti' },
-  { code: 'de', flag: '🇩🇪', name: 'Deutsch' },
 ] as const;
 
 export function LanguageSwitcher({ scrolled }: { scrolled: boolean }) {

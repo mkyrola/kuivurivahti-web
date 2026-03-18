@@ -10,7 +10,7 @@
     "customers": "Kunder",
     "support": "Support",
     "contact": "Kontakt",
-    "demo": "Beställ demo",
+    "demo": "Kontakta oss",
     "language": "Språk"
   },
   "hero": {
@@ -19,13 +19,13 @@
     "youSleep": "Du sover.",
     "tagline": "Den enda torkvakten som aldrig sover.",
     "subTagline": "AI-driven övervakning av spannmålstork. Brandvarning 10–15 min i förväg. Installation under 30 minuter.",
-    "cta1": "Beställ demo",
+    "cta1": "Kontakta oss",
     "cta2": "Se hur det fungerar",
     "exhaust": "Frånluft",
     "riseRate": "Stigningshastighet",
     "anomaly": "ANOMALI",
     "checkDryer": "Kontrollera torken — temperaturen stiger snabbt",
-    "closedRemotely": "Stängd på distans. Allt OK.",
+    "closedRemotely": "Växlad till kylläge på distans. Allt OK.",
     "backToSleep": "Tillbaka till sömnen. 04:15.",
     "buttonPresses": "3 knapptryckningar senare...",
     "stat1": "13 000",
@@ -36,7 +36,7 @@
     "stat3Label": "genomsnittlig skada"
   },
   "problem": {
-    "headline": "3 000 torkar utan fjärrövervakning. Varje höst.",
+    "headline": "Tusentals torkar utan fjärrövervakning. Varje höst.",
     "card1Title": "Sömnbrist",
     "card1Text": "Under skördesäsongen vaknar lantbrukare kl 2–4 på natten för att kontrollera torken. 4–6 veckor varje höst. Över 200 timmar förlorad sömn.",
     "card2Title": "Brandrisken är verklig",
@@ -45,14 +45,14 @@
     "card3Text": "En procentenhet för torrt = 300–500 € förlust per parti. Lantbrukare övertorkar för säkerhets skull — slösar energi och spannmål."
   },
   "features": {
-    "headline": "En enhet. Tre sensorer. AI.",
-    "temp": { "title": "Temperatur + fuktighet", "text": "Den enda enheten som mäter båda. Temperatur berättar vad som händer — fuktighet berättar när spannmålen är torr." },
-    "ai": { "title": "AI-driven brandvarning", "text": "Upptäcker onormala temperaturstegringshastigheter 10–15 min före kritiska situationer." },
+    "headline": "En enhet. Två sensorer. Smart övervakning.",
+    "temp": { "title": "Temperatur + fuktighet", "text": "Frånluftstemperatur är den primära torkningsindikatorn. Fuktighetssensorn ger ytterligare data för framtida AI-modellträning." },
+    "ai": { "title": "Smart brandvarning", "text": "Upptäcker onormala temperaturstegringshastigheter — skiljer normala torkcykler från farlig överhettning." },
     "alert": { "title": "Larm på tre sätt", "text": "Push-meddelande, SMS och röstsamtal. Väcker dig även när telefonen är på tyst." },
     "weather": { "title": "Vädermedveten torkplanering", "text": "72h torkfönsterprognos. Frostprognos. Åskvarning. NordPool elpris." },
-    "fourG": { "title": "4G + 8h batteri", "text": "Fungerar utan hemnätverk. Fungerar vid strömavbrott. Täcker hela Finland." },
-    "install": { "title": "Installation under 30 min", "text": "Ingen elektriker behövs. Fäst sensor på frånluftskanal — klart." },
-    "ce": { "title": "CE + Tillverkad i Finland", "text": "Industristandard. -40°C köldtålighet." },
+    "fourG": { "title": "4G + 8h batteri", "text": "Fungerar utan hemnätverk. Enheten förblir aktiv vid strömavbrott — skickar larm så snart 4G-anslutning är tillgänglig." },
+    "install": { "title": "Installation under 30 min", "text": "1) Fäst sensor på frånluftskanal. 2) Sätt i SIM-kort. 3) Ladda ner app & para enheten. 4) Ställ in larmgränser. Ingen elektriker behövs." },
+    "ce": { "title": "CE + Tillverkad i Finland", "text": "Industristandard. Driftstemperatur -40°C till +70°C (per komponentspecifikationer)." },
     "brand": { "title": "Fungerar med alla märken", "text": "Antti, Mepu, Opico — märket spelar ingen roll. Har den en frånluftskanal passar SEEMOTO KUIVURIVAHTI." }
   },
   "weather": {
@@ -68,17 +68,17 @@
     "poweredBy": "Data: Meteorologiska institutet + Open-Meteo"
   },
   "sensor": {
-    "headline": "Industriell sensorteknik",
+    "headline": "Designad i Finland, tillsammans med lantbrukare",
     "pt100": "PT100 temperatursensor (±0.1°C)",
     "sht41": "SHT41 fuktighetssensor (±1.5%RH)",
     "nrf": "nRF9161 4G LTE-M",
-    "battery": "8h batteri — fungerar vid strömavbrott",
+    "battery": "8h batteri — enheten förblir aktiv vid strömavbrott",
     "ip67": "IP67 — regn- och dammtålig",
     "ce": "CE-certifierad"
   },
   "testimonial": {
-    "title": "Veijo Hujus tork. Augusti 2025. 6 478 mätningar.",
-    "quote": "För första gången på 15 år sov jag hela natten under skördesäsongen. När larmet kom kl 3:47 stängde jag av torken från telefonen. Behövde inte stiga upp ur sängen.",
+    "title": "Verklig kund: Veijo Hujus tork. Augusti 2025. 6 478 mätningar.",
+    "quote": "För första gången på 15 år sov jag hela natten under skördesäsongen. När larmet kom kl 3:47 växlade jag torken till kylläge från telefonen. Behövde inte stiga upp ur sängen.",
     "name": "Veijo Huju",
     "location": "Sastamala, Birkaland"
   },
@@ -119,24 +119,23 @@
       "period": "",
       "features": ["5+ torkar", "Flotthanterings-dashboard", "API-integration", "4h SLA svarstid", "Dedikerad kontaktperson"]
     },
-    "subsidy": "Livsmedelsverket investeringsstöd: upp till 40% av hårdvarukostnaden. Vi hjälper med ansökan.",
-    "leasing": "Hyra €49/mån — inkluderar enhet, Pro-prenumeration och installationsstöd.",
+    "subsidy": "KUIVURIVAHTI kan kvalificera sig för Livsmedelsverkets digitaliseringsstöd för lantbruk. Kontakta oss för detaljer.",
     "guarantee": "90 dagars pengarna-tillbaka-garanti. Ingen risk."
   },
   "roadmap": {
-    "headline": "AI förbättras varje skördesäsong",
+    "headline": "Ju fler torkar vi övervakar, desto smartare blir systemet.",
     "items": [
-      { "year": "2025", "title": "Brandvarning", "text": "Temperaturanomalidetektering 10–15 min i förväg" },
-      { "year": "2026", "title": "Torrhetsförutsägelse", "text": "Förutsäga exakt torktid från frånluftsfuktighet" },
-      { "year": "2027", "title": "Energioptimering", "text": "Automatisk torkparameterjustering baserat på elpris" }
+      { "year": "2025", "title": "Brandvarning", "text": "Temperaturanomalidetektering och identifiering av onormala stigningstrender" },
+      { "year": "2026", "title": "Torrhetsförutsägelse", "text": "Förutsäga torktid baserat på frånluftsdata" },
+      { "year": "2027", "title": "Energioptimering", "text": "Torkparameteroptimering baserat på elpris och väderprognos" }
     ]
   },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
-    "subHeadline": "Beställ din demo idag.",
-    "delivery": "Leverans inom 5 arbetsdagar.",
+    "subHeadline": "Kontakta oss idag.",
+    "delivery": "Leveranstid överenskommes vid beställning.",
     "guarantee": "90 dagars pengarna-tillbaka-garanti.",
-    "button1": "Beställ demo",
+    "button1": "Kontakta oss",
     "button2": "Ladda ner broschyr PDF",
     "badges": ["Tillverkad i Finland", "CE-certifierad", "Business Finland-stödd"]
   },
@@ -151,6 +150,16 @@
     "submit": "Skicka",
     "success": "Tack! Vi kontaktar dig inom 24 timmar.",
     "phoneNumber": "+358 45 125 9000"
+  },
+  "about": {
+    "headline": "Vilka vi är",
+    "text": "SEEMOTO är ett finskt teknikföretag som utvecklar AI-drivna övervakningslösningar för lantbruk. KUIVURIVAHTI föddes i samarbete med lantbrukare — från verkliga behov, för verkliga problem.",
+    "founded": "Grundat",
+    "foundedValue": "2024, Finland",
+    "backed": "Stödd av",
+    "backedValue": "Business Finland",
+    "team": "Team",
+    "teamValue": "Ingenjörer + lantbrukare"
   },
   "footer": {
     "tagline": "Din torkvakt — se allt, var du än är.",

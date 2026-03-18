@@ -19,10 +19,11 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 // Simulated real data based on Veijo Huju pilot (Aug–Sep 2025)
+// Normal exhaust temp range: 40–60°C. Anomaly spike reaches ~75°C.
 const SESSION_DATA = Array.from({ length: 72 }, (_, i) => {
   const h = i / 12;
-  const baseExhaust = 38 + Math.sin(h * 0.8) * 4 + h * 0.3;
-  const anomaly = h > 4.3 && h < 4.9 ? (h - 4.3) * 14 : 0;
+  const baseExhaust = 48 + Math.sin(h * 0.8) * 5 + h * 0.4;
+  const anomaly = h > 4.3 && h < 4.9 ? (h - 4.3) * 22 : 0;
   const outdoor = 18 + Math.sin(h * 0.4) * 3;
   return {
     t: `${Math.floor(h)}:${String(Math.round((h % 1) * 60)).padStart(2, '0')}`,
@@ -101,7 +102,7 @@ export function DryingCurveStory() {
             <LineChart data={chartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
               <XAxis dataKey="t" tick={{ fontSize: 10, fill: 'rgba(255,255,255,0.3)', fontFamily: 'var(--font-jetbrains)' }} interval={11} stroke="rgba(255,255,255,0.1)" />
-              <YAxis domain={[10, 70]} tick={{ fontSize: 10, fill: 'rgba(255,255,255,0.3)', fontFamily: 'var(--font-jetbrains)' }} unit="°" stroke="rgba(255,255,255,0.1)" />
+              <YAxis domain={[10, 85]} tick={{ fontSize: 10, fill: 'rgba(255,255,255,0.3)', fontFamily: 'var(--font-jetbrains)' }} unit="°" stroke="rgba(255,255,255,0.1)" />
               <Tooltip
                 contentStyle={{ background: 'rgba(13,21,32,0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#fff', fontSize: '11px', fontFamily: 'var(--font-jetbrains)' }}
                 formatter={(v) => [`${v}°C`]}

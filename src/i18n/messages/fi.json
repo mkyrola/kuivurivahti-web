@@ -10,7 +10,7 @@
     "customers": "Asiakkaat",
     "support": "Tuki",
     "contact": "Ota yhteyttä",
-    "demo": "Tilaa demo",
+    "demo": "Ota yhteyttä",
     "language": "Kieli"
   },
   "hero": {
@@ -19,13 +19,13 @@
     "youSleep": "Sinä nukut.",
     "tagline": "Ainoa kuivurivahti, joka ei koskaan nuku.",
     "subTagline": "Tekoälypohjainen viljankuivurin etävalvonta. Palovaroitus 10–15 min etukäteen. Asennusaika alle 30 minuuttia.",
-    "cta1": "Tilaa demo",
+    "cta1": "Ota yhteyttä",
     "cta2": "Katso miten toimii",
     "exhaust": "Poistoilma",
     "riseRate": "Nousunopeus",
     "anomaly": "ANOMALIA",
     "checkDryer": "Tarkista kuivuri — lämpötila nousee nopeasti",
-    "closedRemotely": "Suljettu etänä. Kaikki kunnossa.",
+    "closedRemotely": "Siirretty jäähdytysmoodiin etänä. Kaikki kunnossa.",
     "backToSleep": "Takaisin uneen. 04:15 AM.",
     "buttonPresses": "3 napin painallusta myöhemmin...",
     "stat1": "13 000",
@@ -36,7 +36,7 @@
     "stat3Label": "vahinko keskimäärin"
   },
   "problem": {
-    "headline": "3 000 kuivuria ilman etävalvontaa. Joka syksy.",
+    "headline": "Tuhansia kuivureita ilman etävalvontaa. Joka syksy.",
     "card1Title": "Uni jää lyhyeksi",
     "card1Text": "Satokaudella viljelijä herää klo 2–4 aamulla tarkastamaan kuivurin. 4–6 viikkoa joka syksy. Yli 200 tuntia menetettyä unta.",
     "card2Title": "Tulipalovaara on todellinen",
@@ -45,14 +45,14 @@
     "card3Text": "Yksi prosenttiyksikkö liikaa kuivattuna = 300–500 € häviö per erä. Viljelijä kuivaa varmuuden vuoksi — energiaa ja viljaa hukkaan."
   },
   "features": {
-    "headline": "Yksi laite. Kolme sensoria. Tekoäly.",
-    "temp": { "title": "Lämpötila + kosteus", "text": "Ainoa laite, joka mittaa molemmat. Lämpötila kertoo mitä tapahtuu — kosteus kertoo milloin vilja on kuiva." },
-    "ai": { "title": "Tekoälypohjainen palovaroitus", "text": "Tunnistaa epänormaalit lämpötilanousunopeudet 10–15 min ennen kriittistä tilannetta." },
+    "headline": "Yksi laite. Kaksi anturia. Älykäs valvonta.",
+    "temp": { "title": "Lämpötila + kosteus", "text": "Poistoilman lämpötila on tärkein kuivumisen mittari. Kosteusanturi tuo lisädataa tulevaisuuden tekoälymalleille." },
+    "ai": { "title": "Älykäs palovaroitus", "text": "Tunnistaa epänormaalit lämpötilanousunopeudet ja erottaa normaalin kuivausprosessin vaarallisesta ylikuumenemisesta." },
     "alert": { "title": "Hälytys kolmella tavalla", "text": "Push-ilmoitus, SMS ja äänisoitto. Herää vaikka puhelin olisi äänettömällä." },
     "weather": { "title": "Säätietoinen kuivaussuunnittelu", "text": "72h kuivausikkunaennuste. Hallaennuste. Ukkosmyrskyhälytys. NordPool sähkönhinta." },
-    "fourG": { "title": "4G + 8h akku", "text": "Toimii ilman kotiverkkoa. Toimii sähkökatkon aikana. Koko Suomi kattaa." },
-    "install": { "title": "Asennus alle 30 min", "text": "Ei sähkömiestä. Kiinnitä anturi poistoputkeen — valmis." },
-    "ce": { "title": "CE + Valmistettu Suomessa", "text": "Teollisuuden standardit. -40°C pakkaskestävyys." },
+    "fourG": { "title": "4G + 8h akku", "text": "Toimii ilman kotiverkkoa. Laite pysyy toiminnassa sähkökatkon aikana — lähettää hälytykset heti kun 4G-yhteys on saatavilla." },
+    "install": { "title": "Asennus alle 30 min", "text": "1) Kiinnitä anturi poistoputkeen. 2) Aseta SIM-kortti. 3) Lataa sovellus ja yhdistä laite. 4) Aseta hälytysrajat. Ei sähkömiestä." },
+    "ce": { "title": "CE + Valmistettu Suomessa", "text": "Teollisuuden standardit. Käyttölämpötila -40°C...+70°C (komponenttispesifikaatio)." },
     "brand": { "title": "Sopii kaikkiin merkkeihin", "text": "Antti, Mepu, Opico — merkkiä ei väliä. Jos siinä on poistoputki, SEEMOTO KUIVURIVAHTI sopii." }
   },
   "weather": {
@@ -68,17 +68,17 @@
     "poweredBy": "Tiedot: Ilmatieteen laitos + Open-Meteo"
   },
   "sensor": {
-    "headline": "Teollisuustason anturitekniikka",
+    "headline": "Suunniteltu Suomessa, yhdessä viljelijöiden kanssa",
     "pt100": "PT100 lämpötila-anturi (±0.1°C)",
     "sht41": "SHT41 kosteusanturi (±1.5%RH)",
     "nrf": "nRF9161 4G LTE-M",
-    "battery": "8h akku — toimii sähkökatkon aikana",
+    "battery": "8h akku — laite pysyy toiminnassa sähkökatkossa",
     "ip67": "IP67 — kestää sateen ja pölyn",
     "ce": "CE-merkintä"
   },
   "testimonial": {
-    "title": "Veijo Hujun kuivuri. Elokuu 2025. 6 478 mittausta.",
-    "quote": "Ensimmäistä kertaa 15 vuoteen nukuin koko yön satokauden aikana. Kun hälytys tuli klo 3:47, sammutin kuivurin puhelimella. En tarvinnut nousta sängyltä.",
+    "title": "Todellinen asiakas: Veijo Hujun kuivuri. Elokuu 2025. 6 478 mittausta.",
+    "quote": "Ensimmäistä kertaa 15 vuoteen nukuin koko yön satokauden aikana. Kun hälytys tuli klo 3:47, siirsin kuivurin jäähdytysmoodiin puhelimella. En tarvinnut nousta sängyltä.",
     "name": "Veijo Huju",
     "location": "Sastamala, Pirkanmaa"
   },
@@ -119,24 +119,23 @@
       "period": "",
       "features": ["5+ kuivuria", "Laivueen hallintapaneeli", "API-integraatio", "SLA 4h vasteaika", "Oma yhteyshenkilö"]
     },
-    "subsidy": "Ruokavirasto investointituki: jopa 40% laitteistohinnasta. Me autamme hakuprosessissa.",
-    "leasing": "Vuokraa €49/kk — sisältää laitteen, Pro-tilauksen ja asennustuen.",
+    "subsidy": "KUIVURIVAHTI voi olla oikeutettu Ruokaviraston maatalouden digitalisointitukeen. Kysy lisää meiltä.",
     "guarantee": "90 päivän rahat takaisin -takuu. Ei riskiä."
   },
   "roadmap": {
-    "headline": "Tekoäly kehittyy joka satokausi",
+    "headline": "Mitä enemmän kuivureita valvomme, sitä älykkäämmäksi järjestelmä kehittyy.",
     "items": [
-      { "year": "2025", "title": "Palovaroitus", "text": "Lämpötila-anomalioiden tunnistus 10–15 min etukäteen" },
-      { "year": "2026", "title": "Kuivuusennuste", "text": "Poistoilman kosteudesta tarkan kuivumisajan ennustaminen" },
-      { "year": "2027", "title": "Energiaoptimointi", "text": "Automaattinen kuivausparametrien säätö sähkönhinnan mukaan" }
+      { "year": "2025", "title": "Palovaroitus", "text": "Lämpötila-anomalioiden tunnistus ja poikkeavan nousutrendin havaitseminen" },
+      { "year": "2026", "title": "Kuivuusennuste", "text": "Kuivumisajan ennustaminen poistoilmadatan perusteella" },
+      { "year": "2027", "title": "Energiaoptimointi", "text": "Kuivausparametrien optimointi sähkönhinnan ja sääennusteen mukaan" }
     ]
   },
   "cta": {
     "headline": "SEEMOTO KUIVURIVAHTI",
-    "subHeadline": "Tilaa demo tänään.",
-    "delivery": "Toimitusaika 5 arkipäivää.",
+    "subHeadline": "Ota yhteyttä tänään.",
+    "delivery": "Toimitusaika sovitaan tilauksen yhteydessä.",
     "guarantee": "90 päivän rahat takaisin -takuu.",
-    "button1": "Tilaa demo",
+    "button1": "Ota yhteyttä",
     "button2": "Lataa esite PDF",
     "badges": ["Valmistettu Suomessa", "CE-merkitty", "Business Finland -tuettu"]
   },
@@ -151,6 +150,16 @@
     "submit": "Lähetä",
     "success": "Kiitos! Otamme yhteyttä 24h sisällä.",
     "phoneNumber": "+358 45 125 9000"
+  },
+  "about": {
+    "headline": "Keitä me olemme",
+    "text": "SEEMOTO on suomalainen teknologiayritys, joka kehittää tekoälypohjaisia valvontaratkaisuja maatalouden tarpeisiin. KUIVURIVAHTI syntyi yhteistyössä viljelijöiden kanssa — oikeista tarpeista, oikeisiin ongelmiin.",
+    "founded": "Perustettu",
+    "foundedValue": "2024, Suomi",
+    "backed": "Rahoitus",
+    "backedValue": "Business Finland",
+    "team": "Tiimi",
+    "teamValue": "Insinöörejä + viljelijöitä"
   },
   "footer": {
     "tagline": "Kuivurisi vartija — näet kaiken, missä ikinä olet.",
