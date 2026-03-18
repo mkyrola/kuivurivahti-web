@@ -23,20 +23,17 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Configure npm legacy peer deps
-        run: npm config set legacy-peer-deps true
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Build for Cloudflare Pages
-        run: npx @cloudflare/next-on-pages
+      - name: Build for Cloudflare Workers
+        run: npx @opennextjs/cloudflare build
         env:
           NODE_ENV: production
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 9a99f9b865ee762e25e8531927a08840
-          command: pages deploy .vercel/output/static --project-name=kuivurivahti-web --branch=master
+          command: deploy
